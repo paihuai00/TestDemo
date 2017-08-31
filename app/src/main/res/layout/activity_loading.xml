@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <com.mytestdemo.loading_view.RectTextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        />
+
+    <com.mytestdemo.loading_view.LoadingView
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:layout_centerInParent="true"
+        app:middle_text="中"
+        app:loading_color="@color/cardview_dark_background"/>
+</RelativeLayout>

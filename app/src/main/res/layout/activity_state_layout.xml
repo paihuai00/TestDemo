@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <View
+        android:id="@+id/status_bar_top"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/main_top_bg"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="50dp"
+        android:text="测试。。。。。。。。。。"
+        android:background="@android:color/background_dark"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:text="按钮"
+        android:background="@drawable/main_top_bg"/>
+</LinearLayout>

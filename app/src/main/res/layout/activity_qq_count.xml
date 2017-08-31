@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mytestdemo.qq_step_count_view.QQStepCountView
+        android:layout_width="800px"
+        android:layout_height="500px"
+        android:id="@+id/step_view"
+        app:maxCount="200"
+        app:storkeWidth="15"
+        app:arcTextSize="160px"
+        app:arcTextColor="@color/gray"
+        app:outArcColor="@color/topbar_bg"
+        android:background="@color/gray_bg"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/start"
+        android:text="start"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pause"
+        android:text="pause"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/end"
+        android:text="stop"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

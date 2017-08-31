@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.mytestdemo"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':pickerview')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //图片选择器
+
+    //字体对齐
+
+    //RxGalleryFinal依赖
+
+    //recyclerview  adapter
+
+    //fab
+
+    //手势密码
+
+    //butterknife
+
+    //布局配置
+
+    //retrofit和rxjava
+
+    //富文本
+
+    //    compile 'io.reactivex:rxjava:1.0.1'
+    compile 'com.yinglan.shadowimageview:shadowimageview:1.0.2'
+    compile 'com.android.support:recyclerview-v7:25.2.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.kyleduo.switchbutton:library:1.4.5'
+    compile 'cn.finalteam:galleryfinal:1.4.3'
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.android.support:support-v4:25.1.1'
+    compile 'me.codeboy.android:align-text-view:2.3.0'
+    compile 'cn.finalteam.rxgalleryfinal:library:1.0.1'
+    compile 'com.zhy:base-rvadapter:3.0.3'
+    compile 'io.github.yavski:fab-speed-dial:1.0.1'
+    compile 'com.7heaven.widgets:gesturelock:1.3'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    compile 'com.android.support:design:25.2.0'
+    compile 'com.zhy:autolayout:1.4.5'
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.okhttp3:okhttp:3.7.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.7.0'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.2.0'
+    compile 'com.jakewharton.rxbinding:rxbinding:1.0.0'
+    compile 'com.zzhoujay.richtext:richtext:2.5.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.github.Aspsine:IRecyclerView:0.0.5'
+    compile 'com.andrognito.patternlockview:patternlockview:1.0.0'
+    compile 'com.stkent:polygondrawingutil:1.0.0'
+    compile 'com.willowtreeapps.spruce:spruce-android:1.0.1'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile 'com.bakerj:infinite-cards:1.0.1'
+    compile 'com.github.pinguo-zhouwei:MZBannerView:v1.1.0'
+
+    //知乎图片选择器，使用需要添加 Gilde
+    compile 'com.zhihu.android:matisse:0.5.0-alpha4'
+
+    //智能上下拉，刷新
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'//没有使用特殊Header，可以不加这行
+
+}

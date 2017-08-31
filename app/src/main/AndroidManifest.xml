@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mytestdemo">
+
+    <!-- 网络 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name=".MyAppContext"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="design_width"
+            android:value="1080" />
+        <meta-data
+            android:name="design_height"
+            android:value="1920" />
+
+        <activity
+            android:name=".MainActivity"
+            android:persistableMode="persistAcrossReboots">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+
+        <!-- 懒加载 -->
+        <activity
+            android:name=".lazy_fragment.LazyFragmentActivity"
+            android:label="@string/app_name" />
+
+        <!-- 常规recyclerview -->
+        <activity android:name=".recycleview_normal.NormalRecycleViewActivity" />
+        <!-- RecyclerView  diff测试 -->
+        <activity android:name=".recycleview_diffutil.MyRecycleViewActivity" />
+
+        <!-- view -->
+        <activity android:name=".my_view.MyViewActivity" />
+
+        <!-- drawable -->
+        <activity android:name=".drawable_test.MyDrawableActivity" />
+
+        <!-- 网格recyclerView -->
+        <activity android:name=".grid_recyclerview.MyAddaRecycleActivity" />
+
+        <!-- Viewpager -->
+        <activity android:name=".recyclerview_snaphelper.MySnapHelperActivity" />
+        <activity android:name=".my_switch_button.MySwitchButtonActivity" />
+        <activity android:name=".my_gridview.MyGridViewActivity" />
+
+        <!-- 顶部的状态栏 -->
+        <activity android:name=".my_state_bar.MyStateActivity" />
+
+        <!-- 顶部的状态栏,浸入式 -->
+        <activity android:name=".my_state_bar2.MyStateActivity2" />
+
+        <!-- 文字对齐 -->
+        <activity android:name=".my_test_duiqi.MyTestActivity" />
+
+        <!-- pickerview -->
+        <!-- <activity android:name=".my_picker_view.MyPickerViewActivity" /> -->
+
+
+        <!-- gallery final -->
+        <activity android:name=".my_galleryfinal.MyGalleryFinalActivity" />
+
+        <!-- ToolBar -->
+        <activity
+            android:name=".my_toolbar.MyToolBarActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Rx GalleryFinal图片选择器 -->
+        <activity android:name=".my_rx_galleryfinall.MyRxGalleryFinalActivity" />
+        <activity
+            android:name="cn.finalteam.rxgalleryfinal.ui.activity.MediaActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- path 画画 -->
+        <activity android:name=".my_path_paint_canvas.MyPathRadarActivity" />
+
+        <!-- 属性动画 -->
+        <activity android:name=".my_animator.MyAnimatorActivity" />
+
+        <!-- fab -->
+        <activity android:name=".my_fab_button.MyFloatActionButtonActivity" />
+
+        <!-- 侧滑菜单 -->
+        <activity android:name=".my_navigation.MyNavigationActivity" />
+        <activity android:name=".my_navigation.MyNavigationActivity2" />
+
+        <!-- 手势密码 -->
+        <activity android:name=".my_lockview.LockActivity" />
+        <activity android:name=".my_textinputlayout.TextInputActivity" />
+
+        <!-- TextInputLayout -->
+        <activity android:name=".my_textinputlayout.TextInputActivity" />
+
+        <!-- 键盘监听 -->
+        <activity
+            android:name=".my_keyboard.LoginActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".my_permission.MyPermissionActivity" />
+
+        <!-- 运行时权限 -->
+        <activity android:name=".my_permission.MyPermissionActivity" />
+        <activity android:name=".my_rxjava.MyRxJavaActivity" />
+
+        <!-- RxJava -->
+        <activity android:name=".my_rxjava.MyRxJavaActivity" />
+
+        <!-- 折叠布局 -->
+        <activity android:name=".my_collapsingtoolbar.CollapsingToolbarActivity" />
+        <activity android:name=".table_viewpager.MyTabViewPagerActivity" />
+        <activity android:name=".my_okhttp.MyOktttpActivity" />
+        <activity android:name=".my_keyboard.KeyBoardActivity" />
+        <activity android:name=".my_mvp.view.MyLoginActivity" />
+
+        <!-- 观察者模式 -->
+        <activity android:name=".my_observer_rxjava.MyObserver" />
+        <activity android:name=".my_tabhost.TabHostActivity" />
+        <activity android:name=".my_htextview.TextViewActivity" />
+        <activity android:name=".smart_recyclerview.SmartRecyclerViewActivity" />
+        <activity android:name=".my_polygondraw.PolygonActivity" />
+        <activity android:name=".my_shadow_img.ShadowActivity" />
+        <activity android:name=".my_spinner.SpinnerActivity" />
+        <activity android:name=".my_infinite_img.InfiniteActivity"/>
+
+        <activity android:name=".my_banner.BannerActivity" />
+
+        <activity android:name=".my_service.MyServiceActivity" />
+
+        <service android:name=".my_service.MyService" />
+
+        <service
+            android:name=".my_okhttp.DownloadService"
+            android:enabled="true"
+            android:exported="true"/>
+
+        <activity android:name=".my_httpurlconnection.MyHttpUrlConnetcionActivity" />
+
+        <activity android:name=".my_bitmap.BitmapActivity" />
+
+        <activity android:name=".my_web_h5.WebToHtmlActivity" />
+
+        <activity android:name=".my_sqlite.MySqliteActivity" />
+
+        <activity android:name=".my_seekbar_bezier.SeekBarActivity" />
+
+        <activity android:name=".my_matrix.MatrixActivity" />
+
+        <!--知乎图片选择器，需要添加provider-->
+        <activity android:name=".my_zh_photo_choose.ZHPhotoActivity" />
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.mytestdemo.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public"/>
+        </provider>
+
+        <activity android:name=".my_record_play.RecordActivity" />
+
+        <activity android:name=".my_message_bubble.MsgBubbleActivity" />
+
+        <activity android:name=".drag_message_bomb.MessageBombActivity" />
+
+        <activity android:name=".my_flowerview.FlowerActivity" />
+
+        <activity android:name=".fish_bezier_view.FishActivity" />
+
+        <activity android:name=".loading_view.LoadingActivity" />
+
+        <activity android:name=".yahoo_ball_loadingview.YahooLoadActivity" />
+
+        <activity android:name=".city_loadview.CityLoadActivity" />
+
+        <activity android:name=".qq_step_count_view.QQStepCountActivity" />
+
+        <activity android:name=".my_side_bar.MySideBarActivity" />
+    </application>
+
+</manifest>

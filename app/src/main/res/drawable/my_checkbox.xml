@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/item_checked_tag" android:state_selected="true" />
+
+    <item android:drawable="@drawable/duihao" android:state_selected="false" />
+
+    <item android:drawable="@drawable/duihao"/>
+
+</selector>

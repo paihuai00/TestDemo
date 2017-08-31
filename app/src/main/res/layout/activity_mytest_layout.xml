@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="界面出现变化，计算可视区域高度visibleHeight与Activity根view的高度rootHeight之差heightDifference。界面出现变化，计算可视区域高度visibleHeight与Activity根view的高度rootHeight之差heightDifference。界面出现变化，计算可视区域高度visibleHeight与Activity根view的高度rootHeight之差heightDifference。界面出现变化，计算可视区域高度visibleHeight与Activity根view的高度rootHeight之差heightDifference。界面出现变化，计算可视区域高度visibleHeight与Activity根view的高度rootHeight之差heightDifference。界面出现变化，计算可视区域高度visibleHeight与Activity根view的高度rootHeight之差heightDifference。界面出现变化，计算可视区域高度visibleHeight与Activity根view的高度rootHeight之差heightDifference。"/>
+
+
+    <me.codeboy.android.aligntextview.AlignTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/align_txt"
+        android:lineSpacingExtra="15px"
+        android:padding="40px"
+        android:text="界面出现变化，计算可视区域高界面出现变化，计算可视区域高界面出现变化，计算可视区域高界面出现变化，计算可视区域高界面出现变化，计算可视区域高界面出现变化，计算可视区域高界面出现变化，计算可视区域高"/>
+
+</LinearLayout>

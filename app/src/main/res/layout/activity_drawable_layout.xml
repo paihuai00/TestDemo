@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/select_img"
+        android:id="@+id/select_btn"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_normal"
+        android:layout_marginTop="30px" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/select_edit"
+        android:layout_marginTop="30px"
+        android:background="@null"
+        android:drawableBottom="@drawable/edit_line_bg"
+        android:paddingLeft="10dip"
+        android:singleLine="true"
+        android:textColor="#000"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/select_edit2"
+        android:layout_marginTop="30px"
+        android:background="@drawable/edit_select_bg"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TransitionDrawable"
+        android:id="@+id/tran_btn"
+        android:background="@drawable/transition_btn_bg"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:id="@+id/img_clip"
+        android:scaleType="fitXY"
+        android:src="@drawable/clip_drawable_test"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="这是选择Text"
+        android:background="@drawable/select_img"/>
+
+</LinearLayout>

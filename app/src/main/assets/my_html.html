@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<style type="text/css">
+			body{color: red} h1 {color: #00ff00} p.id{color: rgb(0,0,255);}
+		</style>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			function disp_confirm_with_args(message) {
+						// 确认对话框
+						confirm(message);
+			}
+
+			function disp_confirm(argument) {
+						// 确认对话框
+						confirm();
+					}		
+
+			function showDevInfo(info) {
+				// body...
+				document.getElementById("subtitle").innerHTML=info;
+			}
+
+			function changeDemoSubtitle() {
+
+				document.getElementById("subtitle").innerHTML="我加了点料";
+			}
+		</script>
+
+		<h1>My First Web Page</h1>
+
+		<h2>
+			<p id="subtitle">
+				My First SubTitle.
+			</p>
+		</h2>
+		<br/>
+		<br/>
+
+		<input type="button" onclick="disp_confirm()" value="点击调用Native Java代码" />
+		<br/>
+		<br/>
+
+		<input type="button" onclick="disp_confirm_with_args('你咋不上天')" value="点击调用Native Java代码,并传递参数" />
+		
+		<br/>
+		<br/>
+		<input type="button" onclick="disp_confirm_with_args('getDevInfo')" value="点击获取手机信息" />
+
+		<br/>
+		<br/>
+		<!--<input type="button" onclick="myAndroid.show('JS 调用了Android')" value="JS To Android" />-->
+	</body>
+</html>

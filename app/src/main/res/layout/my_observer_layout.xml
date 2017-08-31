@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/observer_btn"
+        android:text="观察者创建"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/map_btn"
+        android:textAllCaps="false"
+        android:text="观察者-->转换类操作符Map"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/flat_btn"
+        android:textAllCaps="false"
+        android:text="观察者-->转换类操作符flatMap"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/operator_btn"
+        android:textAllCaps="false"
+        android:text="观察者-->过滤类操作符operator"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/merge_bt"
+        android:textAllCaps="false"
+        android:text="观察者-->组合操作符operator"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="RxBinding右侧显示倒计时"
+            android:id="@+id/rxbing_time_btn"
+            android:textAllCaps="false"/>
+
+        <TextView
+            android:layout_width="100px"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:id="@+id/show_time"
+            android:textSize="50px"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/name_edit"
+        android:hint="输入用户名"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pwd_edit"
+        android:hint="输入密码"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_btn"
+        android:text="用户名/密码，都输入之后才可点击"/>
+</LinearLayout>

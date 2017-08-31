@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">MyTestDemo</string>
+
+    <string name="settings_short_name">111111</string>
+    <string name="settings_long_name">2222222</string>
+    <string name="settings_disable_msg">3333333333</string>
+
+
+    <string name="about_content"> &#160;&#160;&#160;&#160;尊敬的用户，欢迎您注册成为本APP用户。在注册前请您仔细阅读如下服务条款：
+
+本服务协议双方为本APP与本APP用户，本服务协议具有合同效力。
+
+您确认本服务协议后，本服务协议即在您和本APP之间产生法律效力。请您务必在注册之前认真阅读全部服务协议内容。
+
+您点击协议正本下方的"注册"按钮并按照本APP注册程序成功注册为用户，您的行为则表示您同意并签署了本服务协议。\n
+
+1.       本APP各项服务的所有权、运作权及最终解释权归本APP拥有。\n
+
+2.       本APP有权在必要时修改服务条款。\n
+
+3.       本APP一定不会在未经合法用户授权时公开、编辑或透露其注册资料及保存在本APP中的非公开内容，除非有法律许可要求\n
+
+4.       本APP不担保服务不会受中断，对服务的及时性，安全性，出错发生都不作担保，但会在能力范围内，避免出错。\n
+
+5.       本APP对任何直接、间接、偶然、特殊及继起的损害不负责任。\n
+
+6.       本APP有判定用户的行为是否符合本APP服务条款的要求和精神的权利，如果用户违背本APP服务条款的规定，本APP有权中断其服务的帐号。\n
+
+7.       用户同意保障和维护本APP全体成员的利益，负责支付由用户使用超出服务范围引起的律师费用，违反服务条款的损害补偿费用等。</string>
+    <!-- Menu options -->
+    <string name="sort_option">Sort Example</string>
+    <string name="recycler_view_option">Recycler View Example</string>
+    <!-- Sort options -->
+    <string name="default_sort">Default Sort</string>
+    <string name="cornered_sort">Cornered Sort</string>
+    <string name="continuous_sort">Continuous Sort</string>
+    <string name="continuous_weighted_sort">Continuous Weighted Sort</string>
+    <string name="inline_sort">Inline Sort</string>
+    <string name="linear_sort">Linear Sort</string>
+    <string name="radial_sort">Radial Sort</string>
+    <string name="random_sort">Random Sort</string>
+    <!-- Linear -->
+    <string name="bottom_to_top">Bottom to Top</string>
+    <string name="top_to_bottom">Top to Bottom</string>
+    <string name="left_to_right">Left to Right</string>
+    <string name="right_to_left">Right to Left</string>
+    <!-- Radial -->
+    <string name="top_left">Top Left</string>
+    <string name="top_middle">Top Middle</string>
+    <string name="top_right">Top Right</string>
+    <string name="right">Right</string>
+    <string name="middle">Middle</string>
+    <string name="left">Left</string>
+    <string name="bottom_left">Bottom Left</string>
+    <string name="bottom_middle">Bottom Middle</string>
+    <string name="bottom_right">Bottom Right</string>
+    <!-- Continuous -->
+    <string name="light">Light</string>
+    <string name="medium">Medium</string>
+    <string name="heavy">Heavy</string>
+
+    <string name="reversed">Reversed</string>
+
+    <string name="vertical">Vertical</string>
+    <string name="horizontal">Horizontal</string>
+    <string name="animation_start_duration">0s</string>
+    <string name="animation_end_duration">0.1s</string>
+    <string name="animation_end_longer_duration">2s</string>
+    <string name="duration">Duration</string>
+    <string name="delay">Delay</string>
+    <string name="sort_function">Sort function:</string>
+    <string name="sort_function_selection">Sort Function selection</string>
+    <string name="select">Select</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Code generation -->
+    <string name="code_sample">Code Sample</string>
+    <string name="default_sort_code">new DefaultSort(%1$d);</string>
+    <string name="cornered_sort_code">new CorneredSort(%1$d, %2$s, CorneredSort.Corner.%3$s);</string>
+    <string name="continuous_sort_code">new ContinuousSort(%1$d, %2$s, RadialSort.Position.%3$s);</string>
+    <string name="continuous_weighted_sort_code">new ContinuousWeightedSort(%1$d, %2$s, RadialSort.Position.%3$s, %4$s, %5$s);</string>
+    <string name="inline_sort_code">new InlineSort(%1$d, %2$s, CorneredSort.Corner.%3$s);</string>
+    <string name="linear_sort_code">new LinearSort(%1$d, %2$s, LinearSort.Direction.%3$s);</string>
+    <string name="radial_sort_code">new RadialSort(%1$d, %2$s, RadialSort.Position.%3$s);</string>
+    <string name="random_sort_code">new RandomSort(%1$d);</string>
+    <string name="sort_controls">Sort Controls</string>
+
+</resources>

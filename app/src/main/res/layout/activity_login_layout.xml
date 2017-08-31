@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/login_layout"
+    android:orientation="vertical"
+    android:background="@drawable/bg_login">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/second_layout">
+        <ImageView
+            android:id="@+id/login_logo_img"
+            android:layout_width="310px"
+            android:layout_height="310px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="380px"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/ic_launcher"
+            />
+
+        <EditText
+            android:id="@+id/user_edit"
+            android:layout_width="770px"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_logo_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="230px"
+            android:background="@drawable/bg_login_edit"
+            android:drawableLeft="@drawable/icon_user"
+            android:drawablePadding="40px"
+            android:hint="请输入学号"
+            android:padding="20px"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:textColor="@color/white"
+            android:textColorHint="@color/item_divider"
+            android:textSize="45px" />
+
+        <EditText
+            android:id="@+id/pwd_edit"
+            android:layout_width="770px"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_edit"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90px"
+            android:background="@drawable/bg_login_edit"
+            android:drawableLeft="@drawable/icon_pwd"
+            android:drawablePadding="40px"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone"
+            android:padding="20px"
+            android:textColor="#ffffff"
+            android:textColorHint="@color/item_divider"
+            android:textSize="45px" />
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="750px"
+            android:layout_height="145px"
+            android:layout_marginTop="300px"
+            android:layout_below="@+id/pwd_edit"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_login_btn"
+            android:text="登录"
+            android:textColor="@color/deep_blue"
+            android:textSize="45px" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+    <!--<View-->
+        <!--android:id="@+id/status_bar_top"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="@drawable/bg_login"-->
+        <!--android:visibility="gone" />-->
+
+
+
+
+</com.zhy.autolayout.AutoRelativeLayout>

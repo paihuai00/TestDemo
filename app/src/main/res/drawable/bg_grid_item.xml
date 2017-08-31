@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@android:color/darker_gray">
+    <!--// 这个item中包含你的drawable资源即可-->
+    <item>
+        <shape>
+            <solid android:color="#00000000" />
+        </shape>
+    </item>
+</ripple>

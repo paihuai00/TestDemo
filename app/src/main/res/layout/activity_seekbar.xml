@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/mSeekBar"/>
+            <TextView
+                android:layout_width="50px"
+                android:layout_height="wrap_content"
+                android:id="@+id/progress_txt"
+                android:gravity="center"
+                android:textSize="30px"/>
+        </LinearLayout>
+
+
+        <!--二阶贝塞尔曲线-->
+        <com.mytestdemo.my_seekbar_bezier.QuadBezierView
+            android:layout_width="match_parent"
+            android:layout_height="700px"
+            android:id="@+id/quad_view"
+            android:layout_marginTop="30px"
+            android:background="@android:color/darker_gray"/>
+
+        <!--三阶贝塞尔曲线-->
+
+        <com.mytestdemo.my_seekbar_bezier.CubicBezierView
+            android:layout_width="match_parent"
+            android:layout_height="800px"
+            android:id="@+id/cubic_view"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="改变三阶贝塞尔曲线的控制点"
+            android:id="@+id/cubic_btn"/>
+        
+        <com.mytestdemo.my_seekbar_bezier.MyQuadView
+            android:layout_width="match_parent"
+            android:layout_height="500px"
+            android:id="@+id/mQuadView"/>
+        
+        <com.mytestdemo.view.QuadView
+            android:layout_width="match_parent"
+            android:layout_height="800px"
+            android:id="@+id/quad_view2"
+            android:visibility="gone"/>
+
+        <com.mytestdemo.my_seekbar_bezier.RedCircleView
+            android:layout_width="match_parent"
+            android:layout_height="800px" />
+        
+        <com.mytestdemo.my_seekbar_bezier.DragMsgPointView
+            android:layout_width="match_parent"
+            android:layout_height="600px" />
+
+    
+        <com.mytestdemo.my_message_bubble.MessageBubbleView
+            android:layout_width="match_parent"
+            android:layout_height="800px" />
+
+    </LinearLayout>
+
+
+</ScrollView>
