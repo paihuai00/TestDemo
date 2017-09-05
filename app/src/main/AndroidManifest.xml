@@ -197,6 +197,8 @@
         <activity android:name=".qq_step_count_view.QQStepCountActivity" />
 
         <activity android:name=".my_side_bar.MySideBarActivity" />
+
+        <activity android:name=".xiaomi_loading_view.XiaoMiLoadActivity" />
     </application>
 
 </manifest>

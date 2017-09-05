@@ -67,6 +67,7 @@ import com.mytestdemo.recycleview_diffutil.MyRecycleViewActivity;
 import com.mytestdemo.recycleview_normal.NormalRecycleViewActivity;
 import com.mytestdemo.smart_recyclerview.SmartRecyclerViewActivity;
 import com.mytestdemo.table_viewpager.MyTabViewPagerActivity;
+import com.mytestdemo.xiaomi_loading_view.XiaoMiLoadActivity;
 import com.mytestdemo.yahoo_ball_loadingview.YahooLoadActivity;
 import com.zzhoujay.richtext.RichText;
 
@@ -92,7 +93,7 @@ public class MainActivity extends Activity {
 
     private Button msg_bubble_btn, flower_btn, msg_bomb_btn, fish_btn, loading_btn, yahoo_btn;
 
-    private Button city_btn, qq_count_btn, sidebar_btn;
+    private Button city_btn, qq_count_btn, sidebar_btn, xiaomi_btn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -217,6 +218,20 @@ public class MainActivity extends Activity {
         initQqCount();
 
         initSideBar();
+
+        initXiaoMi();
+    }
+
+    private void initXiaoMi() {
+
+        xiaomi_btn = (Button) findViewById(R.id.xiaomi_btn);
+        xiaomi_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, XiaoMiLoadActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initSideBar() {
