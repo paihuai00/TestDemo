@@ -404,6 +404,13 @@
                 android:textAllCaps="false" />
 
             <Button
+                android:id="@+id/sidebar_high_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="字母索引SideBar View(带搜索)"
+                android:textAllCaps="false" />
+
+            <Button
                 android:id="@+id/qq_count_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

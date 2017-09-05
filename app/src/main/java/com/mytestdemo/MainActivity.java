@@ -49,6 +49,7 @@ import com.mytestdemo.my_seekbar_bezier.SeekBarActivity;
 import com.mytestdemo.my_service.MyServiceActivity;
 import com.mytestdemo.my_shadow_img.ShadowActivity;
 import com.mytestdemo.my_side_bar.MySideBarActivity;
+import com.mytestdemo.my_side_bar.high_sideBar.HighSideBarActivity;
 import com.mytestdemo.my_spinner.SpinnerActivity;
 import com.mytestdemo.my_sqlite.MySqliteActivity;
 import com.mytestdemo.my_state_bar.MyStateActivity;
@@ -93,7 +94,7 @@ public class MainActivity extends Activity {
 
     private Button msg_bubble_btn, flower_btn, msg_bomb_btn, fish_btn, loading_btn, yahoo_btn;
 
-    private Button city_btn, qq_count_btn, sidebar_btn, xiaomi_btn;
+    private Button city_btn, qq_count_btn, sidebar_btn, xiaomi_btn, sidebar_high_btn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -193,6 +194,8 @@ public class MainActivity extends Activity {
 
         initSeekBar();
 
+        initSeekBarHigh();
+
         initMatrix();
 
         initZHPhoto();
@@ -220,6 +223,18 @@ public class MainActivity extends Activity {
         initSideBar();
 
         initXiaoMi();
+    }
+
+    private void initSeekBarHigh() {
+
+        sidebar_high_btn = (Button) findViewById(R.id.sidebar_high_btn);
+        sidebar_high_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, HighSideBarActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initXiaoMi() {

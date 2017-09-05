@@ -26,7 +26,10 @@
     <color name="gray_bg">#AAaAb0</color>
     <color name="white_gray">#BFffffff</color>
 
-
+    <color name="whites">#ffffff</color>
+    <color name="yellow">#F99503</color>
+    <color name="gray_color">#ffe8ecef</color>
+    <color name="bg_sort_color">#EDEDED</color>
 
     <color name="spruceViewColor">#4bc495</color>
 

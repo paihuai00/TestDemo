@@ -9,6 +9,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:name=".MyAppContext"
@@ -197,6 +199,7 @@
         <activity android:name=".qq_step_count_view.QQStepCountActivity" />
 
         <activity android:name=".my_side_bar.MySideBarActivity" />
+        <activity android:name=".my_side_bar.high_sideBar.HighSideBarActivity" />
 
         <activity android:name=".xiaomi_loading_view.XiaoMiLoadActivity" />
     </application>
