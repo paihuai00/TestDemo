@@ -96,8 +96,7 @@ public class HighSideBarActivity extends AppCompatActivity {
         new ConstactAsyncTask().execute(0);
     }
 
-    private class ConstactAsyncTask extends
-            AsyncTask<Integer, Integer, Integer> {
+    private class ConstactAsyncTask extends AsyncTask<Integer, Integer, Integer> {
 
         @Override
         protected Integer doInBackground(Integer... arg0) {
