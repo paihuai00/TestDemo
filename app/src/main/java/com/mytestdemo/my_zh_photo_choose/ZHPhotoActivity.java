@@ -39,7 +39,6 @@ public class ZHPhotoActivity extends AppCompatActivity {
     List<String> photoPathList;
 
     @Override
-
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zh_photo);

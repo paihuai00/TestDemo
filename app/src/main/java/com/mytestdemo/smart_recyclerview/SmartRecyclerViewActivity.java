@@ -8,9 +8,11 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.mytestdemo.R;
+import com.scwang.smartrefresh.header.MaterialHeader;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.header.BezierRadarHeader;
+import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
@@ -31,6 +33,7 @@ public class SmartRecyclerViewActivity extends AppCompatActivity {
     SmartRefreshLayout refreshLayout;
     @BindView(R.id.header)
     BezierRadarHeader header;
+    ClassicsHeader classicsHeader;
 
     private List<String> list = new ArrayList<>();
     private SmartRecyclerAdapter adapter;
@@ -61,7 +64,7 @@ public class SmartRecyclerViewActivity extends AppCompatActivity {
             }
         });
 
-//        refreshLayout.setRefreshHeader(new MaterialHeader(this).setShowBezierWave(true));
+        refreshLayout.setRefreshHeader(new MaterialHeader(this).setShowBezierWave(true));
 
         for (int i = 0; i < 20; i++) {
             list.add("item:" + i);
