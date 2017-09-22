@@ -424,6 +424,27 @@
                 android:text="小米加载Loading View"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/fliter_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="图片滤镜"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/constraint_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="约束布局"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/clip_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="图片裁剪"
+                android:textAllCaps="false" />
+
             <TextView
                 android:id="@+id/rich_txt"
                 android:layout_width="match_parent"

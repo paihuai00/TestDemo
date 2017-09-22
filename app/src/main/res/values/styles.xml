@@ -9,6 +9,11 @@
         <item name="android:listDivider">@drawable/divider</item>
     </style>
 
+    <style name="NoBackground" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
     <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
         <item name="windowActionBar">false</item>
         <!--注意当我们使用API版本为22及以上来编译的时候要去掉前缀android:-->

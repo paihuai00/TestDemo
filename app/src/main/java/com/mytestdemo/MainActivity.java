@@ -13,9 +13,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mytestdemo.city_loadview.CityLoadActivity;
+import com.mytestdemo.clip_demo.ClipActivity;
+import com.mytestdemo.constraint_test.ConstraintActivity;
 import com.mytestdemo.drag_message_bomb.MessageBombActivity;
 import com.mytestdemo.drawable_test.MyDrawableActivity;
 import com.mytestdemo.fish_bezier_view.FishActivity;
+import com.mytestdemo.gpu_fliter.GpuFliterActivity;
 import com.mytestdemo.grid_recyclerview.MyAddaRecycleActivity;
 import com.mytestdemo.lazy_fragment.LazyFragmentActivity;
 import com.mytestdemo.loading_view.LoadingActivity;
@@ -94,8 +97,9 @@ public class MainActivity extends Activity {
 
     private Button msg_bubble_btn, flower_btn, msg_bomb_btn, fish_btn, loading_btn, yahoo_btn;
 
-    private Button city_btn, qq_count_btn, sidebar_btn, xiaomi_btn, sidebar_high_btn;
+    private Button city_btn, qq_count_btn, sidebar_btn, xiaomi_btn, sidebar_high_btn, fliter_btn;
 
+    private Button constraint_btn, clip_btn;
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
@@ -223,6 +227,48 @@ public class MainActivity extends Activity {
         initSideBar();
 
         initXiaoMi();
+
+        initFliter();
+
+        initConstraint();
+
+        initClip();
+    }
+
+    private void initClip() {
+
+        clip_btn = (Button) findViewById(R.id.clip_btn);
+        clip_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ClipActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initConstraint() {
+
+        constraint_btn = (Button) findViewById(R.id.constraint_btn);
+        constraint_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ConstraintActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initFliter() {
+
+        fliter_btn = (Button) findViewById(R.id.fliter_btn);
+        fliter_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, GpuFliterActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initSeekBarHigh() {
