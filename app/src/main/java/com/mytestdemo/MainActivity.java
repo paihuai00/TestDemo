@@ -94,7 +94,7 @@ public class MainActivity extends Activity {
 
     private Button msg_bubble_btn, flower_btn, msg_bomb_btn, fish_btn, loading_btn, yahoo_btn;
 
-    private Button city_btn, qq_count_btn, sidebar_btn, xiaomi_btn, sidebar_high_btn;
+    private Button city_btn, qq_count_btn, sidebar_btn, xiaomi_btn, sidebar_high_btn, base_recycler_btn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
