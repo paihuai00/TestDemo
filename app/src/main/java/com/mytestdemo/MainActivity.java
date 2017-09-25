@@ -100,6 +100,7 @@ public class MainActivity extends Activity {
     private Button city_btn, qq_count_btn, sidebar_btn, xiaomi_btn, sidebar_high_btn, fliter_btn;
 
     private Button constraint_btn, clip_btn;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
