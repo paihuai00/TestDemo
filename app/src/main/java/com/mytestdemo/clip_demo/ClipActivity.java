@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -79,17 +80,22 @@ public class ClipActivity extends BaseActivity {
     }
 
     private UCrop basisConfig(UCrop uCrop) {
+        //设置裁剪框的比例
         uCrop = uCrop.withAspectRatio(1, 1);
-
-        //高级设置
+        // Options 高级设置
         UCrop.Options options = new UCrop.Options();
         options.setCompressionFormat(Bitmap.CompressFormat.JPEG);
-
+        //设置压缩比例0~100
         options.setCompressionQuality(80);
+        //设置裁剪图片可操作的手势 scale rotate all 三个属性
+        options.setAllowedGestures(UCropActivity.ALL, UCropActivity.ALL, UCropActivity.ALL);
 
-        options.setHideBottomControls(false);//底部的控制栏
+        options.setToolbarColor(ContextCompat.getColor(this, R.color.colorPrimary));
+//        options.setCropFrameColor();
+        //底部的控制栏是否显示
+        options.setHideBottomControls(true);
+
         options.setFreeStyleCropEnabled(true);//自由裁剪
-
         return uCrop.withOptions(options);
     }
 
