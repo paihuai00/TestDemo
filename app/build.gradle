@@ -93,4 +93,10 @@ dependencies {
 
     //图片裁剪
     compile 'com.github.yalantis:ucrop:2.2.1'
+
+    //BRVAH是一个强大的RecyclerAdapter框架
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.28'
+
+    //不同状态
+    compile 'com.kingja.loadsir:loadsir:1.2.0'
 }

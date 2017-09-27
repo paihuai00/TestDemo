@@ -215,6 +215,16 @@
             android:name="com.yalantis.ucrop.UCropActivity"
             android:screenOrientation="portrait"
             />
+
+        <!--bravh-->
+        <activity android:name=".recyclerview_brvah.BravhActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <!--error/empty/success 状态-->
+        <activity android:name=".load_state.LoadStateActivity"
+            android:screenOrientation="portrait"
+            />
     </application>
 
 </manifest>

@@ -4,4 +4,5 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <dimen name="scrollY">-100px</dimen>
+    <dimen name="line_height">50px</dimen>
 </resources>

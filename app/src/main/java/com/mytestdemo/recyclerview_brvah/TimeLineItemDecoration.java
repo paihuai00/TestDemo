@@ -1,4 +1,4 @@
-package com.mytestdemo.view;
+package com.mytestdemo.recyclerview_brvah;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -9,8 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.View;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.mytestdemo.R;
-
 
 /**
  * Created by Administrator on 2017/9/20.
@@ -67,9 +67,9 @@ public class TimeLineItemDecoration extends RecyclerView.ItemDecoration {
         RecyclerView.Adapter adapter = parent.getAdapter();
         if (adapter instanceof BaseQuickAdapter) {
             BaseQuickAdapter baseQuickAdapter = (BaseQuickAdapter) adapter;
-            if (baseQuickAdapter.getHeaderLayoutCount() == 0) {
+            if (baseQuickAdapter.getHeaderLayoutCount() == 0) {//没有 headerView 的时候
                 outRect.set((int) mOutWidth, 0, 0, mLineWidth);
-            } else {
+            } else {//有  headerView 的时候
                 int position = parent.getChildAdapterPosition(view);
                 if (position == 0) {
                     outRect.set(0, 0, 0, 0);

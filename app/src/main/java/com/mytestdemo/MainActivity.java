@@ -21,6 +21,7 @@ import com.mytestdemo.fish_bezier_view.FishActivity;
 import com.mytestdemo.gpu_fliter.GpuFliterActivity;
 import com.mytestdemo.grid_recyclerview.MyAddaRecycleActivity;
 import com.mytestdemo.lazy_fragment.LazyFragmentActivity;
+import com.mytestdemo.load_state.LoadStateActivity;
 import com.mytestdemo.loading_view.LoadingActivity;
 import com.mytestdemo.my_animator.MyAnimatorActivity;
 import com.mytestdemo.my_banner.BannerActivity;
@@ -66,6 +67,7 @@ import com.mytestdemo.my_view.MyViewActivity;
 import com.mytestdemo.my_web_h5.WebToHtmlActivity;
 import com.mytestdemo.my_zh_photo_choose.ZHPhotoActivity;
 import com.mytestdemo.qq_step_count_view.QQStepCountActivity;
+import com.mytestdemo.recyclerview_brvah.BravhActivity;
 import com.mytestdemo.recyclerview_snaphelper.MySnapHelperActivity;
 import com.mytestdemo.recycleview_diffutil.MyRecycleViewActivity;
 import com.mytestdemo.recycleview_normal.NormalRecycleViewActivity;
@@ -99,7 +101,7 @@ public class MainActivity extends Activity {
 
     private Button city_btn, qq_count_btn, sidebar_btn, xiaomi_btn, sidebar_high_btn, fliter_btn;
 
-    private Button constraint_btn, clip_btn;
+    private Button constraint_btn, clip_btn, bravh_btn, load_state_btn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -234,6 +236,34 @@ public class MainActivity extends Activity {
         initConstraint();
 
         initClip();
+
+        initBravth();
+
+        initLoadState();
+    }
+
+    private void initLoadState() {
+
+        load_state_btn = (Button) findViewById(R.id.load_state_btn);
+        load_state_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, LoadStateActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initBravth() {
+        bravh_btn = (Button) findViewById(R.id.bravh_btn);
+        bravh_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, BravhActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void initClip() {

@@ -10,6 +10,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bigkoo.pickerview.BuildConfig;
+import com.kingja.loadsir.core.LoadSir;
+import com.mytestdemo.load_state.callback.CustomCallback;
+import com.mytestdemo.load_state.callback.EmptyCallback;
+import com.mytestdemo.load_state.callback.ErrorCallback;
+import com.mytestdemo.load_state.callback.LoadingCallback;
+import com.mytestdemo.load_state.callback.TimeoutCallback;
 import com.mytestdemo.my_galleryfinal.GlideImageLoader;
 
 import cn.finalteam.galleryfinal.CoreConfig;
@@ -33,6 +39,21 @@ public class MyAppContext extends Application {
         initGallerFilaa();
 
         //测试Application中的回调方法
+
+
+        //配置  不同(网络错误，没有数据。。。)状态的加载
+        initState();
+    }
+
+    private void initState() {
+        LoadSir.beginBuilder()
+                .addCallback(new ErrorCallback())//'添加各种状态页
+                .addCallback(new EmptyCallback())
+                .addCallback(new LoadingCallback())
+                .addCallback(new TimeoutCallback())
+                .addCallback(new CustomCallback())
+                .setDefaultCallback(LoadingCallback.class)//设置默认状态页
+                .commit();
 
     }
 
