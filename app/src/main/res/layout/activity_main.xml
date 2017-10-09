@@ -459,6 +459,13 @@
                 android:text="不同状态时显示页面(empty/error/success)"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/bottom_navigation_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="bottom_navigation_bar"
+                android:textAllCaps="false" />
+
 
             <TextView
                 android:id="@+id/rich_txt"

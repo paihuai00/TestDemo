@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mytestdemo.bottom_navigation.BottomNavigationActivity;
 import com.mytestdemo.city_loadview.CityLoadActivity;
 import com.mytestdemo.clip_demo.ClipActivity;
 import com.mytestdemo.constraint_test.ConstraintActivity;
@@ -101,7 +102,7 @@ public class MainActivity extends Activity {
 
     private Button city_btn, qq_count_btn, sidebar_btn, xiaomi_btn, sidebar_high_btn, fliter_btn;
 
-    private Button constraint_btn, clip_btn, bravh_btn, load_state_btn;
+    private Button constraint_btn, clip_btn, bravh_btn, load_state_btn, bottom_navigation_btn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -240,6 +241,20 @@ public class MainActivity extends Activity {
         initBravth();
 
         initLoadState();
+
+        initBottomNavigation();
+    }
+
+    private void initBottomNavigation() {
+
+        bottom_navigation_btn = (Button) findViewById(R.id.bottom_navigation_btn);
+        bottom_navigation_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, BottomNavigationActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initLoadState() {

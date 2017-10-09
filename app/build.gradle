@@ -73,6 +73,7 @@ dependencies {
     compile 'com.zzhoujay.richtext:richtext:2.5.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.github.Aspsine:IRecyclerView:0.0.5'
+
     compile 'com.andrognito.patternlockview:patternlockview:1.0.0'
     compile 'com.stkent:polygondrawingutil:1.0.0'
     compile 'com.willowtreeapps.spruce:spruce-android:1.0.1'
@@ -99,4 +100,7 @@ dependencies {
 
     //不同状态
     compile 'com.kingja.loadsir:loadsir:1.2.0'
+
+    //底部导航栏
+    compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.2'
 }
