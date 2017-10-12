@@ -230,6 +230,11 @@
         <activity
             android:name=".bottom_navigation.BottomNavigationActivity"
             android:screenOrientation="portrait" />
+
+        <!--LayoutInflater理解-->
+        <activity android:name=".layoutinflater.LayoutInflaterActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>
