@@ -203,6 +203,39 @@
 
         <activity android:name=".xiaomi_loading_view.XiaoMiLoadActivity" />
 
+        <!--滤镜-->
+        <activity android:name=".gpu_fliter.GpuFliterActivity" />
+
+        <!--约束布局-->
+        <activity android:name=".constraint_test.ConstraintActivity" />
+
+        <!--图片裁剪-->
+        <activity android:name=".clip_demo.ClipActivity" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <!--bravh-->
+        <activity android:name=".recyclerview_brvah.BravhActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <!--error/empty/success 状态-->
+        <activity android:name=".load_state.LoadStateActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <!--底部导航栏-->
+        <activity
+            android:name=".bottom_navigation.BottomNavigationActivity"
+            android:screenOrientation="portrait" />
+
+        <!--LayoutInflater理解-->
+        <activity android:name=".layoutinflater.LayoutInflaterActivity"
+            android:screenOrientation="portrait" />
+
+
         <activity android:name=".base_recyclerview.BaseRecyclerActivity" />
     </application>
 

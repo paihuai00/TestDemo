@@ -5,19 +5,27 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mytestdemo.bottom_navigation.BottomNavigationActivity;
 import com.mytestdemo.city_loadview.CityLoadActivity;
+import com.mytestdemo.clip_demo.ClipActivity;
+import com.mytestdemo.constraint_test.ConstraintActivity;
 import com.mytestdemo.drag_message_bomb.MessageBombActivity;
 import com.mytestdemo.drawable_test.MyDrawableActivity;
 import com.mytestdemo.fish_bezier_view.FishActivity;
+import com.mytestdemo.gpu_fliter.GpuFliterActivity;
 import com.mytestdemo.grid_recyclerview.MyAddaRecycleActivity;
+import com.mytestdemo.layoutinflater.LayoutInflaterActivity;
 import com.mytestdemo.lazy_fragment.LazyFragmentActivity;
+import com.mytestdemo.load_state.LoadStateActivity;
 import com.mytestdemo.loading_view.LoadingActivity;
 import com.mytestdemo.my_animator.MyAnimatorActivity;
 import com.mytestdemo.my_banner.BannerActivity;
@@ -63,6 +71,7 @@ import com.mytestdemo.my_view.MyViewActivity;
 import com.mytestdemo.my_web_h5.WebToHtmlActivity;
 import com.mytestdemo.my_zh_photo_choose.ZHPhotoActivity;
 import com.mytestdemo.qq_step_count_view.QQStepCountActivity;
+import com.mytestdemo.recyclerview_brvah.BravhActivity;
 import com.mytestdemo.recyclerview_snaphelper.MySnapHelperActivity;
 import com.mytestdemo.recycleview_diffutil.MyRecycleViewActivity;
 import com.mytestdemo.recycleview_normal.NormalRecycleViewActivity;
@@ -94,8 +103,12 @@ public class MainActivity extends Activity {
 
     private Button msg_bubble_btn, flower_btn, msg_bomb_btn, fish_btn, loading_btn, yahoo_btn;
 
+    private Button city_btn, qq_count_btn, sidebar_btn, xiaomi_btn, sidebar_high_btn, fliter_btn;
     private Button city_btn, qq_count_btn, sidebar_btn, xiaomi_btn, sidebar_high_btn, base_recycler_btn;
 
+    private Button constraint_btn, clip_btn, bravh_btn, load_state_btn, bottom_navigation_btn;
+
+    private Button layoutinflater_btn;
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
@@ -223,6 +236,106 @@ public class MainActivity extends Activity {
         initSideBar();
 
         initXiaoMi();
+
+        initFliter();
+
+        initConstraint();
+
+        initClip();
+
+        initBravth();
+
+        initLoadState();
+
+        initBottomNavigation();
+
+
+        initLayoutInflater();
+    }
+
+    private void initLayoutInflater() {
+
+        layoutinflater_btn = (Button) findViewById(R.id.layoutinflater_btn);
+        layoutinflater_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, LayoutInflaterActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initBottomNavigation() {
+
+        bottom_navigation_btn = (Button) findViewById(R.id.bottom_navigation_btn);
+        bottom_navigation_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, BottomNavigationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+    }
+
+    private void initLoadState() {
+
+        load_state_btn = (Button) findViewById(R.id.load_state_btn);
+        load_state_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, LoadStateActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initBravth() {
+        bravh_btn = (Button) findViewById(R.id.bravh_btn);
+        bravh_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, BravhActivity.class);
+                startActivity(intent);
+            }
+        });
+
+    }
+
+    private void initClip() {
+
+        clip_btn = (Button) findViewById(R.id.clip_btn);
+        clip_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ClipActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initConstraint() {
+
+        constraint_btn = (Button) findViewById(R.id.constraint_btn);
+        constraint_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ConstraintActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initFliter() {
+
+        fliter_btn = (Button) findViewById(R.id.fliter_btn);
+        fliter_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, GpuFliterActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initSeekBarHigh() {

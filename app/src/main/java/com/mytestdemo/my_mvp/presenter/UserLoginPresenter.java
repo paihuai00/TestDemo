@@ -27,7 +27,8 @@ public class UserLoginPresenter {
     public void login() {
         userLoginView.showLoading();
 
-        userBiz.login(userLoginView.getUserName(), userLoginView.getPassword(), new OnLoginListener() {
+        userBiz.login(userLoginView.getUserName(), userLoginView.getPassword(),
+                new OnLoginListener() {
             @Override
             public void loginSuccess(final User user) {
                 //需要在UI线程执行

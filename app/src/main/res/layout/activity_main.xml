@@ -424,12 +424,53 @@
                 android:text="小米加载Loading View"
                 android:textAllCaps="false" />
 
-
             <Button
-                android:id="@+id/base_recycler_btn"
+                android:id="@+id/fliter_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RecyclerAdapter框架("
+                android:text="图片滤镜"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/constraint_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="约束布局"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/clip_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="图片裁剪"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/bravh_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BRVAH是一个强大的RecyclerAdapter框架"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/load_state_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="不同状态时显示页面(empty/error/success)"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/bottom_navigation_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="bottom_navigation_bar"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/layoutinflater_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LayoutInflater理解"
                 android:textAllCaps="false" />
 
             <TextView
