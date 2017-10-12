@@ -34,5 +34,21 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
-    x
+    <!--自定义Dialog  Style-->
+    <style name="default_dialog_style" parent="@android:style/Theme.Dialog">
+        <!--边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity上面-->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 无标题-->
+        <item name="android:windowNoTitle">true</item>
+
+        <!--背景透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+
+    </style>
+
 </resources>
