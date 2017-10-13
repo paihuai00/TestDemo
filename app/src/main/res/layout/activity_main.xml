@@ -472,6 +472,12 @@
                 android:layout_height="wrap_content"
                 android:text="LayoutInflater理解"
                 android:textAllCaps="false" />
+            <Button
+                android:id="@+id/layoutinflater_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LayoutInflater理解"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/dialog_btn"

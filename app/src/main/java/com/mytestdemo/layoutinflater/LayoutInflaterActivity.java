@@ -30,9 +30,12 @@ public class LayoutInflaterActivity extends BaseActivity {
         setContentView(R.layout.activity_layoutinflater);
         ButterKnife.bind(this);
 
+
         initTest1();
 
+
 //        initTest2();
+
 
 //        initTest3();
 
@@ -51,6 +54,7 @@ public class LayoutInflaterActivity extends BaseActivity {
         View childView=layoutInflater.inflate(R.layout.layoutinflater_add_layout, null);
 
         rootView.addView(childView);
+
     }
 
     /**
