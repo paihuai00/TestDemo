@@ -88,6 +88,7 @@ class CustomAlertController {
 
             }
 
+
             if (viewHelper == null) {
                 throw new IllegalArgumentException("CustomAlertDialog 请设置布局setContentView()");
             }
