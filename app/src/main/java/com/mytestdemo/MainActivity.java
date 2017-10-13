@@ -251,28 +251,14 @@ public class MainActivity extends Activity {
 
 
         initLayoutInflater();
-    }
-
-    private void initLayoutInflater() {
-
-        layoutinflater_btn = (Button) findViewById(R.id.layoutinflater_btn);
-        layoutinflater_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, LayoutInflaterActivity.class);
-                startActivity(intent);
-            }
-        });
-
-
-        initLayoutInflater();
 
         initCustomDialog();
     }
 
+
     private void initCustomDialog() {
 
-        dialog_btn = (Button) findViewById(R.id.dialog_btn);
+        Button dialog_btn = (Button) findViewById(R.id.dialog_btn);
         dialog_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -284,7 +270,7 @@ public class MainActivity extends Activity {
 
     private void initLayoutInflater() {
 
-        layoutinflater_btn = (Button) findViewById(R.id.layoutinflater_btn);
+        Button layoutinflater_btn = (Button) findViewById(R.id.layoutinflater_btn);
         layoutinflater_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
