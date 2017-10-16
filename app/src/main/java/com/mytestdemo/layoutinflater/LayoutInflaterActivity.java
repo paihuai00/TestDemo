@@ -1,6 +1,7 @@
 package com.mytestdemo.layoutinflater;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;

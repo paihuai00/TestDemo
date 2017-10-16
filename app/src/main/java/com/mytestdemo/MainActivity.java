@@ -18,6 +18,7 @@ import com.mytestdemo.bottom_navigation.BottomNavigationActivity;
 import com.mytestdemo.city_loadview.CityLoadActivity;
 import com.mytestdemo.clip_demo.ClipActivity;
 import com.mytestdemo.constraint_test.ConstraintActivity;
+import com.mytestdemo.custom_dialog.CustomDialogTestActivity;
 import com.mytestdemo.drag_message_bomb.MessageBombActivity;
 import com.mytestdemo.drawable_test.MyDrawableActivity;
 import com.mytestdemo.fish_bezier_view.FishActivity;
@@ -89,6 +90,8 @@ public class MainActivity extends Activity {
     private final String TAG = MainActivity.class.getSimpleName();
     private Button lazy_btn;//懒加载
 
+
+
     private Button recycler_btn,normal_recycler_btn,view_btn,drawable_btn,grid_btn;
     private Button snaphelper_btn,switch_btn,grid_viewpager,state_btn,state_btn2,align_txt,pickerview_txt;
     private Button galleryfinal_txt,toolbar_txt,rx_txt,radar_txt,animator_txt,fab_txt,navigation_txt,navigation_txt2,gesturelock_txt;
@@ -108,7 +111,6 @@ public class MainActivity extends Activity {
 
     private Button constraint_btn, clip_btn, bravh_btn, load_state_btn, bottom_navigation_btn;
 
-    private Button layoutinflater_btn;
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
@@ -251,11 +253,26 @@ public class MainActivity extends Activity {
 
 
         initLayoutInflater();
+
+        initCustomDialog();
+    }
+
+
+    private void initCustomDialog() {
+
+        Button dialog_btn = (Button) findViewById(R.id.dialog_btn);
+        dialog_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CustomDialogTestActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initLayoutInflater() {
 
-        layoutinflater_btn = (Button) findViewById(R.id.layoutinflater_btn);
+        Button layoutinflater_btn = (Button) findViewById(R.id.layoutinflater_btn);
         layoutinflater_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -237,6 +237,15 @@
 
 
         <activity android:name=".base_recyclerview.BaseRecyclerActivity" />
+
+        <!--LayoutInflater理解-->
+        <activity android:name=".layoutinflater.LayoutInflaterActivity"
+            android:screenOrientation="portrait" />
+
+        <!--自定义dialog 测试类-->
+        <activity android:name=".custom_dialog.CustomDialogTestActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>
