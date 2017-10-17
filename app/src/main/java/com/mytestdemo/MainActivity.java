@@ -5,9 +5,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -107,7 +105,7 @@ public class MainActivity extends Activity {
 
     private Button msg_bubble_btn, flower_btn, msg_bomb_btn, fish_btn, loading_btn, yahoo_btn;
 
-    private Button city_btn, qq_count_btn, sidebar_btn, xiaomi_btn, sidebar_high_btn, fliter_btn;
+    private Button fliter_btn;
     private Button city_btn, qq_count_btn, sidebar_btn, xiaomi_btn, sidebar_high_btn, base_recycler_btn;
 
     private Button constraint_btn, clip_btn, bravh_btn, load_state_btn, bottom_navigation_btn;

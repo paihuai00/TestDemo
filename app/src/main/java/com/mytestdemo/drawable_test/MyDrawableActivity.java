@@ -36,6 +36,8 @@ public class MyDrawableActivity extends Activity {
         initTranBtn();
 
         initClip();
+
+
     }
 
     private void initClip() {

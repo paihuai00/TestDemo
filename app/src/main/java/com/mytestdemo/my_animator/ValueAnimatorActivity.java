@@ -38,53 +38,50 @@ public class ValueAnimatorActivity extends BaseActivity {
         private float y = 150;
 
         public SingleLine(Context context) {
-                super(context);
+            this(context, null);
+        }
+
+        public SingleLine(Context context, AttributeSet attrs) {
+            super(context, attrs);
             mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-                mPaint.setColor(Color.RED);
-            }
+            mPaint.setColor(Color.RED);
+            mPaint.setStrokeWidth(10);
+        }
 
-            public SingleLine(Context context, AttributeSet attrs) {
-                super(context, attrs);
-                mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-                mPaint.setColor(Color.RED);
-                mPaint.setStrokeWidth(10);
-            }
 
-            public SingleLine(Context context, AttributeSet attrs, int defStyleAttr) {
-                super(context, attrs, defStyleAttr);
-            }
+        public SingleLine(Context context, AttributeSet attrs, int defStyleAttr) {
+            super(context, attrs, defStyleAttr);
+        }
 
-            @Override
-            protected void onDraw(Canvas canvas) {
-                if (0 == x) {
-                    startAnimation();
+        @Override
+        protected void onDraw(Canvas canvas) {
+            if (0 == x) {
+                startAnimation();
+            }
+            canvas.drawLine(0, y, x, x + y, mPaint);
+        }
+
+        private void startAnimation() {
+            ValueAnimator animator = ValueAnimator.ofObject(new SingleLineEvaluator(), 0, 500);
+            animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                @Override
+                public void onAnimationUpdate(ValueAnimator animation) {
+                    float i = (float) animation.getAnimatedValue();
+                    x = i;
+                    //不断的刷新UI
+                    invalidate();
                 }
-                canvas.drawLine(0, y, x, x + y, mPaint);
-            }
-
-
-            private void startAnimation() {
-                ValueAnimator animator = ValueAnimator.ofObject(new SingleLineEvaluator(), 0, 500);
-                animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-                    @Override
-                    public void onAnimationUpdate(ValueAnimator animation) {
-                        float i = (float) animation.getAnimatedValue();
-                        x = i;
-                        //不断的刷新UI
-                        invalidate();
-                    }
-                });
-                animator.setDuration(2000);
-                animator.start();
-            }
+            });
+            animator.setDuration(2000);
+            animator.start();
         }
+    }
 
-        private class SingleLineEvaluator implements TypeEvaluator {
-
-            @Override
-            public Object evaluate(float fraction, Object startValue, Object endValue) {
-                return fraction * (((Number) endValue).floatValue() - ((Number) startValue).floatValue());
-            }
+    private class SingleLineEvaluator implements TypeEvaluator {
+        @Override
+        public Object evaluate(float fraction, Object startValue, Object endValue) {
+            return fraction * (((Number) endValue).floatValue() - ((Number) startValue).floatValue());
         }
+    }
 
 }
