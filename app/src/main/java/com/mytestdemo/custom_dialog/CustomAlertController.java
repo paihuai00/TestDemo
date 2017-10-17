@@ -3,8 +3,11 @@ package com.mytestdemo.custom_dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.util.SparseArray;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
 
 import java.lang.ref.WeakReference;
 import java.util.Dictionary;
@@ -60,9 +63,24 @@ class CustomAlertController {
         public int mViewLayoutResId;
 
         //用于存放，多个文本
-        SparseArray<CharSequence> mTextArray = new SparseArray<>();
+        public SparseArray<CharSequence> mTextArray = new SparseArray<>();
         //用于存放，多个View 的点击事件,此时使用软引用，避免内存泄漏
-        SparseArray<WeakReference<View.OnClickListener>> mClickListenerArray = new SparseArray<>();
+        public SparseArray<View.OnClickListener> mClickListenerArray = new SparseArray<>();
+
+        //
+        public int mWidth = ViewGroup.LayoutParams.WRAP_CONTENT;
+
+        public int mHeight = ViewGroup.LayoutParams.WRAP_CONTENT;
+        /**
+         * 默认中间
+         */
+        public int mGravity = Gravity.CENTER;
+
+        /**
+         * 动画
+         */
+        public int mAnimation = 0;
+
 
         public CustomAlertDialogParams(Context context, int themeResId) {
             this.mContext = context;
@@ -77,27 +95,19 @@ class CustomAlertController {
         public void apply(CustomAlertController mAlert) {
             //1，设置ViewHelper
             CustomDialogViewHelper viewHelper = null;
-            if (viewHelper == null) {
-                viewHelper = new CustomDialogViewHelper();
 
-                if (mView!=null)
-                    viewHelper.setContentView(mView);
-
-                if (mViewLayoutResId!=0)
-                    viewHelper.setContentView(mViewLayoutResId);
-
+            if (mViewLayoutResId!=0){
+                viewHelper = new CustomDialogViewHelper(mContext,mViewLayoutResId);
             }
 
-
+            if (mView != null) {
+                viewHelper=new CustomDialogViewHelper();
+                viewHelper.setContentView(mView);
+            }
+            //如果此时，viewHelper == null 说明没有 设置布局，抛出异常
             if (viewHelper == null) {
                 throw new IllegalArgumentException("CustomAlertDialog 请设置布局setContentView()");
             }
-
-            //设置 布局
-            if (viewHelper.getContentViewId()!=0)
-                mAlert.getCustomDialog().setContentView(viewHelper.getContentViewId());
-            if (viewHelper.getContentView()!=null)
-                mAlert.getCustomDialog().setContentView(viewHelper.getContentView());
 
             //2，设置文本
             int textArraySize = mTextArray.size();
@@ -111,6 +121,26 @@ class CustomAlertController {
                 viewHelper.setOnClickListener(mClickListenerArray.keyAt(i), mClickListenerArray.valueAt(i));
 
             }
+
+            //给dialog设置布局
+            mAlert.getCustomDialog().setContentView(viewHelper.getContentView());
+
+            //4,配置自定义效果， 全屏  底部弹出  动画 等....
+
+            Window window = mAlert.getWindow();
+
+            //设置位置
+            window.setGravity(mGravity);
+
+            if (mAnimation != 0) {
+                window.setWindowAnimations(mAnimation);
+            }
+
+            //设置  宽  高
+            WindowManager.LayoutParams layoutParams = window.getAttributes();
+            layoutParams.width = mWidth;
+            layoutParams.height = mHeight;
+            window.setAttributes(layoutParams);
         }
     }
 }

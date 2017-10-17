@@ -4,7 +4,9 @@ import android.app.Dialog;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.StyleRes;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.mytestdemo.R;
 
@@ -80,7 +82,7 @@ public class CustomAlertDialog extends Dialog{
          */
         public Builder setOnClickListener(int view, View.OnClickListener onClickListener) {
             //可能会有多个view 点击事件，所以使用集合来存储
-            P.mClickListenerArray.put(view, (WeakReference<View.OnClickListener>) onClickListener);
+            P.mClickListenerArray.put(view,onClickListener);
             return this;
         }
 
@@ -99,6 +101,47 @@ public class CustomAlertDialog extends Dialog{
             return this;
         }
 
+        //设置全屏
+        public Builder fullWidth() {
+            P.mWidth = ViewGroup.LayoutParams.MATCH_PARENT;
+            return this;
+        }
+
+
+
+        /**
+         * //底部弹出
+         * @param isAnimator 是否有动画
+         * @return
+         */
+        public Builder showFromBottom(boolean isAnimator) {
+            if (isAnimator) {
+                P.mAnimation = R.style.dialog_from_bottom;
+            }
+            P.mGravity = Gravity.BOTTOM;
+
+            return this;
+        }
+
+        /**
+         * 设置  宽 高
+         *
+         * @return
+         */
+        public Builder setWidthAndHeight(int width, int height) {
+            P.mWidth = width;
+            P.mHeight = height;
+            return this;
+        }
+
+        /**
+         * 添加动画
+         * @return
+         */
+        public Builder addAnimation(int styleAnimation) {
+            P.mAnimation = styleAnimation;
+            return this;
+        }
 
         public CustomAlertDialog create() {
             // We can't use Dialog's 3-arg constructor with the createThemeContextWrapper param,
