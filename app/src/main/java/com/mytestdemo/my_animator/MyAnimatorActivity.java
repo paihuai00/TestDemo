@@ -2,6 +2,8 @@ package com.mytestdemo.my_animator;
 
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
@@ -21,6 +23,9 @@ import com.mytestdemo.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Created by cuishuxiang on 2017/4/20.
  * <p>
@@ -29,6 +34,8 @@ import java.util.List;
 
 public class MyAnimatorActivity extends AppCompatActivity implements View.OnClickListener {
 
+    @BindView(R.id.img_animtorSet)
+    ImageView imgAnimtorSet;
     //ObjectAnimator
     private int[] res = {R.id.red, R.id.a, R.id.b, R.id.c, R.id.d};
     private List<ImageView> list = new ArrayList<>();
@@ -47,6 +54,7 @@ public class MyAnimatorActivity extends AppCompatActivity implements View.OnClic
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animator_layout);
+        ButterKnife.bind(this);
 
         for (int i = 0; i < res.length; i++) {
             ImageView imageView = (ImageView) findViewById(res[i]);
@@ -60,6 +68,31 @@ public class MyAnimatorActivity extends AppCompatActivity implements View.OnClic
         normalAnimator();
 
         groupXmlAnimator();
+
+
+        initAnimatorSet();
+    }
+
+    private void initAnimatorSet() {
+        //组合动画
+        ObjectAnimator animator = ObjectAnimator.ofInt(imgAnimtorSet, "backgroundColor", 0xFFFF0000, 0xFFFF00FF);
+        ObjectAnimator animator1 = ObjectAnimator.ofFloat(imgAnimtorSet, "translationX", 0.0f, 200.0f, 0f);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(imgAnimtorSet, "scaleX", 1.0f, 2.0f);
+        ObjectAnimator animator3 = ObjectAnimator.ofFloat(imgAnimtorSet, "rotationX", 0.0f, 90.0f, 0.0F);
+        ObjectAnimator animator4 = ObjectAnimator.ofFloat(imgAnimtorSet, "alpha", 1.0f, 0.2f, 1.0F);
+
+        //组合动画方式1
+        AnimatorSet set = new AnimatorSet();
+        ((set.play(animator).with(animator1).before(animator2)).before(animator3)).after(animator4);
+        set.setDuration(5000);
+        set.start();
+
+        set.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+            }
+        });
     }
 
     private void groupXmlAnimator() {
@@ -70,8 +103,11 @@ public class MyAnimatorActivity extends AppCompatActivity implements View.OnClic
         animator.start();
     }
 
+    /**
+     * 视图动画
+     */
     private void normalAnimator() {
-        //平移动画
+        //平移动画  默认是以左上角为中心
         TranslateAnimation translateAnimation = new TranslateAnimation(0, 500, 0, 0);
         translateAnimation.setDuration(2000);
         translation_btn = (Button) findViewById(R.id.translation_btn);

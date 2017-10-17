@@ -29,6 +29,7 @@ import com.mytestdemo.lazy_fragment.LazyFragmentActivity;
 import com.mytestdemo.load_state.LoadStateActivity;
 import com.mytestdemo.loading_view.LoadingActivity;
 import com.mytestdemo.my_animator.MyAnimatorActivity;
+import com.mytestdemo.my_animator.ValueAnimatorActivity;
 import com.mytestdemo.my_banner.BannerActivity;
 import com.mytestdemo.my_bitmap.BitmapActivity;
 import com.mytestdemo.my_collapsingtoolbar.CollapsingToolbarActivity;
@@ -253,6 +254,20 @@ public class MainActivity extends Activity {
         initLayoutInflater();
 
         initCustomDialog();
+
+        initValueAnimator();
+    }
+
+    private void initValueAnimator() {
+
+        Button value_animator_btn = (Button) findViewById(R.id.value_animator_btn);
+        value_animator_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ValueAnimatorActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

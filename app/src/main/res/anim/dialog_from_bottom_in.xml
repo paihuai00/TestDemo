@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!--参数数值 ：1000->0 以目标左上角为原点，让View从Y轴1000px位置
+        平移到 0 位-->
+    <!--<translate-->
+        <!--android:duration="400"-->
+        <!--android:fromXDelta="0"-->
+        <!--android:fromYDelta="1000"-->
+        <!--android:toXDelta="0"-->
+        <!--android:toYDelta="0" />-->
+
+    <!--参数数值 ：100% -> 0 以View自身的大小为基准，从Y轴 100% 的位置
+        平移到 0% 位-->
+    <!--<translate-->
+        <!--android:duration="400"-->
+        <!--android:fromXDelta="0"-->
+        <!--android:fromYDelta="100%"-->
+        <!--android:toXDelta="0"-->
+        <!--android:toYDelta="0" />-->
+
+    <!--参数数值 ：100%p -> 0 以View父布局的大小为基准，从Y轴 100% 的位置
+        平移到 0% 位-->
     <translate
         android:duration="400"
-        android:fromYDelta="1000"
         android:fromXDelta="0"
+        android:fromYDelta="100%p"
         android:toXDelta="0"
-        android:toYDelta="0"
-        />
-
+        android:toYDelta="0" />
 </set>
