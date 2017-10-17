@@ -100,6 +100,8 @@
 
         <!-- 属性动画 -->
         <activity android:name=".my_animator.MyAnimatorActivity" />
+        <!--  属性动画- 估值器-->
+        <activity android:name=".my_animator.ValueAnimatorActivity" />
 
         <!-- fab -->
         <activity android:name=".my_fab_button.MyFloatActionButtonActivity" />

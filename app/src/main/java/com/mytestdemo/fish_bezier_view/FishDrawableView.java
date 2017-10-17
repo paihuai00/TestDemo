@@ -111,8 +111,10 @@ public class FishDrawableView extends RelativeLayout {
         if (direction == 0) {
             if (abc >= 0) {
                 return 0;
-            } else
+            } else{
                 return 180;
+            }
+
         } else {
             if (direction > 0) {//右侧顺时针为负
                 return -temAngle;
@@ -192,7 +194,7 @@ public class FishDrawableView extends RelativeLayout {
         path.moveTo(fishMiddle.x - deltaX, fishMiddle.y - deltaY);
         final float angle = includedAngle(fishMiddle, fishHead, touch);
         float delta = calculateAngle(fishMiddle, fishHead);
-        PointF controlF = calculatePoint(fishMiddle, 1.6f * fishDrawable.HEAD_RADIUS, angle / 2 + delta);
+        PointF controlF = calculatePoint(fishMiddle, 1.6f * FishDrawable.HEAD_RADIUS, angle / 2 + delta);
         //把贝塞尔曲线的所有控制点和结束点都做平移处理
         path.cubicTo(fishHead.x - deltaX, fishHead.y - deltaY, controlF.x - deltaX, controlF.y - deltaY, touch.x - deltaX, touch.y - deltaY);
 

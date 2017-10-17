@@ -138,6 +138,13 @@
                 android:textAllCaps="false" />
 
             <Button
+                android:id="@+id/value_animator_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="属性动画 -- 估值器"
+                android:textAllCaps="false" />
+
+            <Button
                 android:id="@+id/fab_txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
