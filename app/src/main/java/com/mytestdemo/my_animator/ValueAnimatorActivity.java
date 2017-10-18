@@ -6,9 +6,11 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.PointF;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -22,6 +24,7 @@ import com.mytestdemo.R;
  */
 
 public class ValueAnimatorActivity extends BaseActivity {
+    private static final String TAG = "ValueAnimatorActivity";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,12 +65,16 @@ public class ValueAnimatorActivity extends BaseActivity {
         }
 
         private void startAnimation() {
-            ValueAnimator animator = ValueAnimator.ofObject(new SingleLineEvaluator(), 0, 500);
+            PointF startPointF = new PointF(0, 0);
+            PointF endPointF = new PointF(300, 300);
+            ValueAnimator animator = ValueAnimator.ofObject(new PointEvaluator(), startPointF, endPointF);
             animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
-                    float i = (float) animation.getAnimatedValue();
-                    x = i;
+                    //此处得到的返回值类型，由PointEvaluator 决定，为 PointF
+                    PointF pointF = (PointF) animation.getAnimatedValue();
+                    Log.d(TAG, "onAnimationUpdate: " + pointF.x);
+                    x = pointF.x;
                     //不断的刷新UI
                     invalidate();
                 }
@@ -76,12 +83,17 @@ public class ValueAnimatorActivity extends BaseActivity {
             animator.start();
         }
     }
-
-    private class SingleLineEvaluator implements TypeEvaluator {
+    /**
+     * 自定义 ，估值器
+     */
+    private class PointEvaluator implements TypeEvaluator<PointF> {
         @Override
-        public Object evaluate(float fraction, Object startValue, Object endValue) {
-            return fraction * (((Number) endValue).floatValue() - ((Number) startValue).floatValue());
+        public PointF evaluate(float fraction, PointF startValue, PointF endValue) {
+            float resultX = startValue.x + fraction * (endValue.x - startValue.x);
+            float rexultY = startValue.y + fraction * (endValue.y - startValue.y);
+
+            Log.d(TAG, "evaluate: resultX= " + resultX + "\nrexultY=" + rexultY);
+            return new PointF(resultX, rexultY);
         }
     }
-
 }
