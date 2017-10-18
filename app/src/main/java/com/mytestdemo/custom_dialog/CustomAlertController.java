@@ -81,7 +81,6 @@ class CustomAlertController {
          */
         public int mAnimation = 0;
 
-
         public CustomAlertDialogParams(Context context, int themeResId) {
             this.mContext = context;
             this.mThemeResId = themeResId;

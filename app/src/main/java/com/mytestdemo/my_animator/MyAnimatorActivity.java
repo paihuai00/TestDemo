@@ -69,8 +69,8 @@ public class MyAnimatorActivity extends AppCompatActivity implements View.OnClic
 
         groupXmlAnimator();
 
-
         initAnimatorSet();
+
     }
 
     private void initAnimatorSet() {

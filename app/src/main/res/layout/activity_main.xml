@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="使用RecyclerViewDiff工具test"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/normal_recycler_btn"
@@ -473,12 +473,6 @@
                 android:text="bottom_navigation_bar"
                 android:textAllCaps="false" />
 
-            <Button
-                android:id="@+id/layoutinflater_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="LayoutInflater理解"
-                android:textAllCaps="false" />
             <Button
                 android:id="@+id/layoutinflater_btn"
                 android:layout_width="match_parent"

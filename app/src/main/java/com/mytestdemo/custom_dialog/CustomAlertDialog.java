@@ -28,7 +28,6 @@ public class CustomAlertDialog extends Dialog{
         mAlert = new CustomAlertController(this,getWindow());
     }
 
-
     public static class  Builder{
 
         CustomAlertController.CustomAlertDialogParams P;
@@ -37,6 +36,7 @@ public class CustomAlertDialog extends Dialog{
             //如果不传，style 就使用默认的style
             this(context, R.style.default_dialog_style);
         }
+
         public Builder(Context context, int themeResId) {
             P = new CustomAlertController.CustomAlertDialogParams(context,themeResId);
         }
@@ -76,7 +76,7 @@ public class CustomAlertDialog extends Dialog{
         }
 
         /**
-         *设置点击事件
+         * 设置点击事件
          * @param view
          * @return
          */
@@ -106,8 +106,6 @@ public class CustomAlertDialog extends Dialog{
             P.mWidth = ViewGroup.LayoutParams.MATCH_PARENT;
             return this;
         }
-
-
 
         /**
          * //底部弹出
