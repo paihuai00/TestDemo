@@ -2,10 +2,10 @@ package com.mytestdemo.my_mvp.presenter;
 
 import android.os.Handler;
 
-import com.mytestdemo.my_mvp.bean.User;
-import com.mytestdemo.my_mvp.biz.IUserBiz;
-import com.mytestdemo.my_mvp.biz.OnLoginListener;
-import com.mytestdemo.my_mvp.biz.UserBiz;
+import com.mytestdemo.my_mvp.model.User;
+import com.mytestdemo.my_mvp.model.IUserModel;
+import com.mytestdemo.my_mvp.model.OnLoginListener;
+import com.mytestdemo.my_mvp.model.UserModel;
 import com.mytestdemo.my_mvp.view.IUserLoginView;
 
 /**
@@ -13,7 +13,7 @@ import com.mytestdemo.my_mvp.view.IUserLoginView;
  */
 
 public class UserLoginPresenter {
-    private IUserBiz userBiz;
+    private IUserModel userBiz;
 
     private IUserLoginView userLoginView;
 
@@ -21,14 +21,13 @@ public class UserLoginPresenter {
 
     public UserLoginPresenter(IUserLoginView userLoginView) {
         this.userLoginView = userLoginView;
-        this.userBiz = new UserBiz();
+        this.userBiz = new UserModel();
     }
 
     public void login() {
         userLoginView.showLoading();
 
-        userBiz.login(userLoginView.getUserName(), userLoginView.getPassword(),
-                new OnLoginListener() {
+        userBiz.login(userLoginView.getUserName(), userLoginView.getPassword(), new OnLoginListener() {
             @Override
             public void loginSuccess(final User user) {
                 //需要在UI线程执行
@@ -56,12 +55,6 @@ public class UserLoginPresenter {
                 });
             }
         });
-    }
-
-    public void clear()
-    {
-        userLoginView.clearUserName();
-        userLoginView.clearPassword();
     }
 
 }

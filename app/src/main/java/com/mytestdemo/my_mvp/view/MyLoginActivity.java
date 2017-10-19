@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.mytestdemo.R;
-import com.mytestdemo.my_mvp.bean.User;
+import com.mytestdemo.my_mvp.model.User;
 import com.mytestdemo.my_mvp.presenter.UserLoginPresenter;
 
 import butterknife.BindView;

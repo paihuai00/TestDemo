@@ -27,6 +27,7 @@ import com.mytestdemo.layoutinflater.LayoutInflaterActivity;
 import com.mytestdemo.lazy_fragment.LazyFragmentActivity;
 import com.mytestdemo.load_state.LoadStateActivity;
 import com.mytestdemo.loading_view.LoadingActivity;
+import com.mytestdemo.mvp_demo2.view.Mvp2LoginActivity;
 import com.mytestdemo.my_animator.MyAnimatorActivity;
 import com.mytestdemo.my_animator.ValueAnimatorActivity;
 import com.mytestdemo.my_banner.BannerActivity;
@@ -257,6 +258,20 @@ public class MainActivity extends BaseActivity {
         initCustomDialog();
 
         initValueAnimator();
+
+        initMvpDemo2();
+    }
+
+    private void initMvpDemo2() {
+
+        Button mvp2_btn = (Button) findViewById(R.id.mvp2_btn);
+        mvp2_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Mvp2LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initValueAnimator() {

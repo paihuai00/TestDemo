@@ -1,6 +1,4 @@
-package com.mytestdemo.my_mvp.biz;
-
-import com.mytestdemo.my_mvp.bean.User;
+package com.mytestdemo.my_mvp.model;
 
 /**
  * Created by cuishuxiang on 2017/5/31.

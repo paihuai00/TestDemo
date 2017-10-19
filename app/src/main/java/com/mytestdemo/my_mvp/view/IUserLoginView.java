@@ -1,6 +1,6 @@
 package com.mytestdemo.my_mvp.view;
 
-import com.mytestdemo.my_mvp.bean.User;
+import com.mytestdemo.my_mvp.model.User;
 
 /**
  * Created by cuishuxiang on 2017/5/31.

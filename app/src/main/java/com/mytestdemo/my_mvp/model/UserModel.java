@@ -1,6 +1,4 @@
-package com.mytestdemo.my_mvp.biz;
-
-import com.mytestdemo.my_mvp.bean.User;
+package com.mytestdemo.my_mvp.model;
 
 /**
  * Created by cuishuxiang on 2017/5/31.
@@ -8,7 +6,7 @@ import com.mytestdemo.my_mvp.bean.User;
  * model
  */
 
-public class UserBiz implements IUserBiz {
+public class UserModel implements IUserModel {
 
     @Override
     public void login(final String username, final String pwd, final OnLoginListener onLoginListener) {

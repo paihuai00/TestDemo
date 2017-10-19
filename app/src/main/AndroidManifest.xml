@@ -248,6 +248,11 @@
         <activity android:name=".custom_dialog.CustomDialogTestActivity"
             android:screenOrientation="portrait" />
 
+        <!--Mvp Demo 2-->
+        <activity
+            android:name=".mvp_demo2.view.Mvp2LoginActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

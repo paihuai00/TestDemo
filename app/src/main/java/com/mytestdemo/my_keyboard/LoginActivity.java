@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
 
 public class LoginActivity extends AppCompatActivity implements View.OnLayoutChangeListener {
 
-    private static final String TAG = "LoginActivity";
+    private static final String TAG = "Mvp2LoginActivity";
 
     ImageView loginLogoImg;
     EditText userEdit;

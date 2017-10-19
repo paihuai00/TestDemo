@@ -1,4 +1,4 @@
-package com.mytestdemo.my_mvp.biz;
+package com.mytestdemo.my_mvp.model;
 
 /**
  * Created by cuishuxiang on 2017/5/31.
@@ -6,6 +6,6 @@ package com.mytestdemo.my_mvp.biz;
  * model
  */
 
-public interface IUserBiz {
+public interface IUserModel {
     void login(String username, String pwd, OnLoginListener onLoginListener);
 }
