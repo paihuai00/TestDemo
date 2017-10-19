@@ -2,18 +2,19 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '26.0.1'
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
-        applicationId "com.mytestdemo"
-        minSdkVersion 16
-        targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
+            //混淆是否开启，返回true则开启
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -52,8 +53,10 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.kyleduo.switchbutton:library:1.4.5'
     compile 'cn.finalteam:galleryfinal:1.4.3'
-    compile 'com.android.support:appcompat-v7:25.1.1'
-    compile 'com.android.support:support-v4:25.1.1'
+    compile rootProject.ext.support_v4
+    compile rootProject.ext.support_v7
+//    compile 'com.android.support:appcompat-v7:25.1.1'
+//    compile 'com.android.support:support-v4:25.1.1'
     compile 'me.codeboy.android:align-text-view:2.3.0'
     compile 'cn.finalteam.rxgalleryfinal:library:1.0.1'
     compile 'com.zhy:base-rvadapter:3.0.3'

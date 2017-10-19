@@ -1,10 +1,15 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+//添加  统一的依赖管理
+apply from: "versions.gradle"
 
+//构建脚本
 buildscript {
     repositories {
+        //依赖的仓库
         jcenter()
     }
     dependencies {
+        //项目依赖的Gradle版本
         classpath 'com.android.tools.build:gradle:2.3.3'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
 

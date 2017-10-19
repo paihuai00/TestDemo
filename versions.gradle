@@ -1,0 +1,19 @@
+ext {
+    android = [
+            applicationId = "com.mytestdemo",
+            compileSdkVersion = 25,
+            buildToolsVersion = "26.0.1",
+            minSdkVersion = 16,
+            targetSdkVersion = 25,
+            versionCode = 1,
+            versionName = "1.0"
+    ]
+
+    version_support = "25.3.0"
+
+    dependencies = [
+            support_v4 = "com.android.support:support-v4:${version_support}",
+            support_v7 = "com.android.support:appcompat-v7:${version_support}",
+            recyclerview = "com.android.support:recyclerview-v7:${version_support}"
+    ]
+}

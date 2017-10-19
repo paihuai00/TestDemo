@@ -3,6 +3,7 @@ package com.mytestdemo;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -85,7 +86,7 @@ import com.zzhoujay.richtext.RichText;
  * Created by cuishuxiang on 2017/3/30.
  */
 
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivity {
     private final String TAG = MainActivity.class.getSimpleName();
     private Button lazy_btn;//懒加载
 
@@ -284,7 +285,6 @@ public class MainActivity extends Activity {
     }
 
     private void initLayoutInflater() {
-
         Button layoutinflater_btn = (Button) findViewById(R.id.layoutinflater_btn);
         layoutinflater_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -294,6 +294,8 @@ public class MainActivity extends Activity {
             }
         });
     }
+
+
 
     private void initBottomNavigation() {
 
