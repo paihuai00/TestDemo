@@ -3,7 +3,6 @@ package com.mytestdemo;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -260,6 +259,21 @@ public class MainActivity extends BaseActivity {
         initValueAnimator();
 
         initMvpDemo2();
+
+
+        initTreeList();
+    }
+
+    private void initTreeList() {
+
+        Button tree_btn = (Button) findViewById(R.id.tree_btn);
+        tree_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, TreeListActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initMvpDemo2() {

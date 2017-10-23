@@ -253,6 +253,10 @@
             android:name=".mvp_demo2.view.Mvp2LoginActivity"
             android:screenOrientation="portrait" />
 
+        <!--可展开的树形控件-->
+        <activity android:name=".tree_list_view.TreeListActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>
