@@ -1,6 +1,5 @@
 package com.mytestdemo;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -43,7 +42,7 @@ import com.mytestdemo.my_keyboard.LoginActivity;
 import com.mytestdemo.my_lockview.LockActivity;
 import com.mytestdemo.my_matrix.MatrixActivity;
 import com.mytestdemo.my_message_bubble.MsgBubbleActivity;
-import com.mytestdemo.my_mvp.view.MyLoginActivity;
+import com.mytestdemo.my_mvp.view.MyLoginActivity2;
 import com.mytestdemo.my_navigation.MyNavigationActivity;
 import com.mytestdemo.my_navigation.MyNavigationActivity2;
 import com.mytestdemo.my_observer_rxjava.MyObserver;
@@ -78,6 +77,7 @@ import com.mytestdemo.recycleview_diffutil.MyRecycleViewActivity;
 import com.mytestdemo.recycleview_normal.NormalRecycleViewActivity;
 import com.mytestdemo.smart_recyclerview.SmartRecyclerViewActivity;
 import com.mytestdemo.table_viewpager.MyTabViewPagerActivity;
+import com.mytestdemo.tree_list_view.TreeListActivity;
 import com.mytestdemo.xiaomi_loading_view.XiaoMiLoadActivity;
 import com.mytestdemo.yahoo_ball_loadingview.YahooLoadActivity;
 import com.zzhoujay.richtext.RichText;
@@ -831,7 +831,7 @@ public class MainActivity extends BaseActivity {
         mvp_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MyLoginActivity.class);
+                Intent intent = new Intent(MainActivity.this, MyLoginActivity2.class);
                 startActivity(intent);
             }
         });

@@ -25,6 +25,12 @@ public class FileBean {
 
     private String describe;
 
+    public FileBean(int id, int pId, String label) {
+        this.id = id;
+        this.pId = pId;
+        this.label = label;
+    }
+
     public int getId() {
         return id;
     }

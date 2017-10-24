@@ -35,7 +35,7 @@ public class LoginPersenter implements IPresenter,OnLoginListenter{
          *
          * OnLoginListenter 通过接口，实现回调
          */
-        loginModel.login(userName, password,this);
+        loginModel.login(userName, password, this);
     }
 
     @Override

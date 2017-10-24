@@ -135,7 +135,7 @@
         <activity android:name=".table_viewpager.MyTabViewPagerActivity" />
         <activity android:name=".my_okhttp.MyOktttpActivity" />
         <activity android:name=".my_keyboard.KeyBoardActivity" />
-        <activity android:name=".my_mvp.view.MyLoginActivity" />
+        <activity android:name=".my_mvp.view.MyLoginActivity2" />
 
         <!-- 观察者模式 -->
         <activity android:name=".my_observer_rxjava.MyObserver" />
