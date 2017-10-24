@@ -257,6 +257,10 @@
         <activity android:name=".tree_list_view.TreeListActivity"
             android:screenOrientation="portrait" />
 
+        <!--打钩View-->
+        <activity android:name=".view_check.CheckActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

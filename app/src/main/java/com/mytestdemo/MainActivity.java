@@ -78,6 +78,7 @@ import com.mytestdemo.recycleview_normal.NormalRecycleViewActivity;
 import com.mytestdemo.smart_recyclerview.SmartRecyclerViewActivity;
 import com.mytestdemo.table_viewpager.MyTabViewPagerActivity;
 import com.mytestdemo.tree_list_view.TreeListActivity;
+import com.mytestdemo.view_check.CheckActivity;
 import com.mytestdemo.xiaomi_loading_view.XiaoMiLoadActivity;
 import com.mytestdemo.yahoo_ball_loadingview.YahooLoadActivity;
 import com.zzhoujay.richtext.RichText;
@@ -262,6 +263,20 @@ public class MainActivity extends BaseActivity {
 
 
         initTreeList();
+
+        initCheck();
+    }
+
+    private void initCheck() {
+
+        Button check_btn = (Button) findViewById(R.id.check_btn);
+        check_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CheckActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initTreeList() {
