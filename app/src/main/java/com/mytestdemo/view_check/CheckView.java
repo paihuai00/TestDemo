@@ -84,6 +84,12 @@ public class CheckView extends View {
      */
     private boolean isChecked = false;
 
+    private OnCheckChangListener onCheckChangListener;
+
+    public void setOnCheckChangListener(OnCheckChangListener onCheckChangListener) {
+        this.onCheckChangListener = onCheckChangListener;
+    }
+
 
     public CheckView(Context context) {
         this(context, null);
@@ -96,6 +102,20 @@ public class CheckView extends View {
     public CheckView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initView();
+        initAnimator();
+
+        this.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                isChecked = !isChecked;
+
+                setChecked(isChecked);
+
+                if (onCheckChangListener != null) {
+                    onCheckChangListener.onCheckChangedListenter((CheckView) v, isChecked);
+                }
+            }
+        });
     }
 
     private void initView() {
@@ -122,8 +142,6 @@ public class CheckView extends View {
         backgroundPaint.setStrokeWidth(defaultPaintWidth);
         backgroundPaint.setColor(checkedColor);//背景色，跟外圈颜色相同
         backgroundPaint.setStyle(Paint.Style.FILL);
-
-        initAnimator();
     }
 
     /**
@@ -141,12 +159,6 @@ public class CheckView extends View {
                 shrinkWidth = currentShink;
 
                 invalidate();
-            }
-        });
-        shinkAnimator.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                Toast.makeText(getContext(), "收缩动画完成", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -180,8 +192,11 @@ public class CheckView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        if (!isChecked) {
+            drawUnChecked(canvas);
 
-        drawUnChecked(canvas);
+            return;
+        }
 
         drawChecked(canvas);
 
@@ -267,9 +282,18 @@ public class CheckView extends View {
     /**
      * 供外部调用的方法
      */
-    public void clickCheckView() {
-        if (!isChecked) {
+    public void setChecked(boolean isCheck) {
+        this.isChecked = isCheck;
+
+        if (isChecked) {
             outLineAnimator.start();
         }
+
+        invalidate();
     }
+
+    public interface OnCheckChangListener {
+        void onCheckChangedListenter(CheckView checkView, boolean isChecked);
+    }
+
 }
