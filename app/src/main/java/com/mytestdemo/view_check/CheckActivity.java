@@ -31,6 +31,6 @@ public class CheckActivity extends BaseActivity {
 
     @OnClick(R.id.strat_btn)
     public void onViewClicked() {
-        checkView.checkView();
+        checkView.clickCheckView();
     }
 }

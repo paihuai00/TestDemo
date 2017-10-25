@@ -7,14 +7,12 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Path;
 import android.graphics.PointF;
 import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
-import android.view.animation.AnticipateInterpolator;
 import android.view.animation.AnticipateOvershootInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.Toast;
@@ -46,7 +44,8 @@ public class CheckView extends View {
      * 画笔
      */
     private Paint checkedPaint;
-    private int checkedColor = Color.parseColor("#FE3F81");
+    private Paint whitePaint;
+    private int checkedColor = Color.parseColor("#FE3F81");//红色
     private float currentOutAngle = 0;//外圈当前的角度
 
     /**
@@ -54,7 +53,9 @@ public class CheckView extends View {
      */
     private Paint backgroundPaint;
     private float shrinkWidth = 0;//收缩的宽度
+
     private ValueAnimator shinkAnimator;//收缩动画
+    private ValueAnimator outLineAnimator;//外圈动画
 
     /**
      * 默认画笔宽度
@@ -105,6 +106,13 @@ public class CheckView extends View {
         unPaint.setStrokeJoin(Paint.Join.ROUND);
         unPaint.setStrokeCap(Paint.Cap.ROUND);
 
+        whitePaint = new Paint(Paint.ANTI_ALIAS_FLAG);//消除锯齿
+        whitePaint.setStrokeWidth(defaultPaintWidth);
+        whitePaint.setColor(Color.WHITE);
+        whitePaint.setStyle(Paint.Style.FILL);
+        whitePaint.setStrokeJoin(Paint.Join.ROUND);
+        whitePaint.setStrokeCap(Paint.Cap.ROUND);
+
         checkedPaint = new Paint(Paint.ANTI_ALIAS_FLAG);//消除锯齿
         checkedPaint.setStrokeWidth(defaultPaintWidth);
         checkedPaint.setColor(checkedColor);
@@ -115,10 +123,13 @@ public class CheckView extends View {
         backgroundPaint.setColor(checkedColor);//背景色，跟外圈颜色相同
         backgroundPaint.setStyle(Paint.Style.FILL);
 
-        initShinkAnimator();
+        initAnimator();
     }
 
-    private void initShinkAnimator() {
+    /**
+     * 初始化 收缩动画  外圈动画
+     */
+    private void initAnimator() {
         shinkAnimator = ValueAnimator.ofFloat(mRadius);
         shinkAnimator.setDuration(mDuration);
         shinkAnimator.setInterpolator(new AnticipateOvershootInterpolator());
@@ -132,11 +143,35 @@ public class CheckView extends View {
                 invalidate();
             }
         });
-
         shinkAnimator.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
                 Toast.makeText(getContext(), "收缩动画完成", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        /**
+         * 外圈动画
+         */
+        outLineAnimator= ValueAnimator.ofFloat(360);
+        outLineAnimator.setDuration(mDuration);
+        outLineAnimator.setInterpolator(new LinearInterpolator());
+        outLineAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                float current = (float) animation.getAnimatedValue();
+                Log.d(TAG, "onAnimationUpdate: current = " + current);
+                currentOutAngle = current;
+
+                invalidate();
+            }
+        });
+        //添加外圈动画完成的监听
+        outLineAnimator.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                Toast.makeText(getContext(), "外圈动画完成", Toast.LENGTH_LONG).show();
+                shinkAnimator.start();
             }
         });
 
@@ -163,10 +198,10 @@ public class CheckView extends View {
         if (mRadius != shrinkWidth) {
             return;
         }
-        unPaint.setColor(Color.WHITE);
-        canvas.drawLine(startTickPoint.x, startTickPoint.y, centerTickPoint.x, centerTickPoint.y, unPaint);
 
-        canvas.drawLine(centerTickPoint.x, centerTickPoint.y, endTickPoint.x, endTickPoint.y, unPaint);
+        canvas.drawLine(startTickPoint.x, startTickPoint.y, centerTickPoint.x, centerTickPoint.y, whitePaint);
+
+        canvas.drawLine(centerTickPoint.x, centerTickPoint.y, endTickPoint.x, endTickPoint.y, whitePaint);
 
     }
 
@@ -183,9 +218,8 @@ public class CheckView extends View {
         //绘制 背景
         canvas.drawCircle(circleCenterPoint.x, circleCenterPoint.y, mRadius, backgroundPaint);
 
-        unPaint.setColor(Color.WHITE);
         //绘制半径不断缩小的圆
-        canvas.drawCircle(circleCenterPoint.x, circleCenterPoint.y, mRadius - shrinkWidth, unPaint);
+        canvas.drawCircle(circleCenterPoint.x, circleCenterPoint.y, mRadius - shrinkWidth, whitePaint);
 
     }
 
@@ -213,31 +247,6 @@ public class CheckView extends View {
         canvas.drawLine(centerTickPoint.x, centerTickPoint.y, endTickPoint.x, endTickPoint.y, unPaint);
     }
 
-    private void startOutAnimator() {
-        ValueAnimator valueAnimator = ValueAnimator.ofFloat(360);
-        valueAnimator.setDuration(mDuration);
-        valueAnimator.setInterpolator(new LinearInterpolator());
-        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                float current = (float) animation.getAnimatedValue();
-                Log.d(TAG, "onAnimationUpdate: current = " + current);
-                currentOutAngle = current;
-
-                invalidate();
-            }
-        });
-        //添加动画完成的监听
-        valueAnimator.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                Toast.makeText(getContext(), "外圈动画完成", Toast.LENGTH_LONG).show();
-                shinkAnimator.start();
-            }
-        });
-        valueAnimator.start();
-    }
-
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
@@ -260,7 +269,7 @@ public class CheckView extends View {
      */
     public void clickCheckView() {
         if (!isChecked) {
-            startOutAnimator();
+            outLineAnimator.start();
         }
     }
 }
