@@ -1,6 +1,7 @@
-package com.mytestdemo.my_mvp.view;
+package com.mytestdemo.mvp_demo2;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 import com.mytestdemo.R;
 import com.mytestdemo.my_mvp.model.User;
 import com.mytestdemo.my_mvp.presenter.UserLoginPresenter;
+import com.mytestdemo.my_mvp.view.IUserLoginView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -33,6 +35,7 @@ public class MyLoginActivity extends AppCompatActivity implements IUserLoginView
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_login);
         ButterKnife.bind(this);
+
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -64,5 +64,15 @@
         <attr name="arcTextColor" format="color|reference" />
 
     </declare-styleable>
+    
+    <!--数字圆环-->
+    <declare-styleable name="DigitalLoadingView">
+        <!--进度条颜色-->
+        <attr name="progress_color" format="color|reference" />
+
+        <!--中心文字颜色-->
+        <attr name="text_color" format="color|reference" />
+    </declare-styleable>
+    
 
 </resources>

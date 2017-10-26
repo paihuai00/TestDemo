@@ -79,6 +79,7 @@ import com.mytestdemo.smart_recyclerview.SmartRecyclerViewActivity;
 import com.mytestdemo.table_viewpager.MyTabViewPagerActivity;
 import com.mytestdemo.tree_list_view.TreeListActivity;
 import com.mytestdemo.view_check.CheckActivity;
+import com.mytestdemo.view_digital_loading.DigitalLoadingActivity;
 import com.mytestdemo.xiaomi_loading_view.XiaoMiLoadActivity;
 import com.mytestdemo.yahoo_ball_loadingview.YahooLoadActivity;
 import com.zzhoujay.richtext.RichText;
@@ -265,6 +266,21 @@ public class MainActivity extends BaseActivity {
         initTreeList();
 
         initCheck();
+
+        initDigitalView();
+    }
+
+    private void initDigitalView() {
+
+        Button digital_btn = (Button) findViewById(R.id.digital_btn);
+        digital_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, DigitalLoadingActivity.class);
+
+                startActivity(intent);
+            }
+        });
     }
 
     private void initCheck() {
