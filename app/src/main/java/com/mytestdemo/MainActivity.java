@@ -85,6 +85,8 @@ import com.mytestdemo.xiaomi_loading_view.XiaoMiLoadActivity;
 import com.mytestdemo.yahoo_ball_loadingview.YahooLoadActivity;
 import com.zzhoujay.richtext.RichText;
 
+import java.util.logging.Logger;
+
 /**
  * Created by cuishuxiang on 2017/3/30.
  */

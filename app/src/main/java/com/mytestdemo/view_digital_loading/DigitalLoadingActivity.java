@@ -10,6 +10,8 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.mytestdemo.BaseActivity;
 
 import com.mytestdemo.R;
+import com.orhanobut.logger.AndroidLogAdapter;
+import com.orhanobut.logger.Logger;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -42,6 +44,15 @@ public class DigitalLoadingActivity extends BaseActivity {
         ButterKnife.bind(this);
 
         initListener();
+        //初始化
+        Logger.addLogAdapter(new AndroidLogAdapter());
+
+        Logger.d("DigitalLoadingActivityw1");
+        //修改打印的TAG
+        Logger.t(TAG).d("两个函数");
+
+        //此处打印，类似C语音的%d  %s
+        Logger.d("你好，我是%s，今年%d ", "csx", 20);
     }
 
     @OnClick(R.id.start_btn)

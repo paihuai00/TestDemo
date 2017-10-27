@@ -19,6 +19,8 @@ import com.mytestdemo.load_state.callback.ErrorCallback;
 import com.mytestdemo.load_state.callback.LoadingCallback;
 import com.mytestdemo.load_state.callback.TimeoutCallback;
 import com.mytestdemo.my_galleryfinal.GlideImageLoader;
+import com.orhanobut.logger.LogAdapter;
+import com.orhanobut.logger.Logger;
 
 import cn.finalteam.galleryfinal.CoreConfig;
 import cn.finalteam.galleryfinal.FunctionConfig;
@@ -52,6 +54,18 @@ public class MyAppContext extends Application {
 
 
         initOkhttp();
+
+//        Logger.addLogAdapter(new LogAdapter() {
+//            @Override
+//            public boolean isLoggable(int priority, String tag) {
+//                return false;
+//            }
+//
+//            @Override
+//            public void log(int priority, String tag, String message) {
+//
+//            }
+//        });
     }
 
     /**
