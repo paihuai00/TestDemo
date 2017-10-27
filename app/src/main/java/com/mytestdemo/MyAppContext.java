@@ -19,6 +19,7 @@ import com.mytestdemo.load_state.callback.ErrorCallback;
 import com.mytestdemo.load_state.callback.LoadingCallback;
 import com.mytestdemo.load_state.callback.TimeoutCallback;
 import com.mytestdemo.my_galleryfinal.GlideImageLoader;
+import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.LogAdapter;
 import com.orhanobut.logger.Logger;
 
@@ -55,18 +56,21 @@ public class MyAppContext extends Application {
 
         initOkhttp();
 
-//        Logger.addLogAdapter(new LogAdapter() {
-//            @Override
-//            public boolean isLoggable(int priority, String tag) {
-//                return false;
-//            }
-//
-//            @Override
-//            public void log(int priority, String tag, String message) {
-//
-//            }
-//        });
+
+        initLogger();
     }
+
+    private void initLogger() {
+        //初始化 logger库
+        Logger.addLogAdapter(new AndroidLogAdapter(){
+            @Override
+            public boolean isLoggable(int priority, String tag) {
+                //log开关
+                return super.isLoggable(priority, tag);
+            }
+        });
+    }
+
 
     /**
      * 使用 progressManager 获得加载的百分比

@@ -44,8 +44,8 @@ public class DigitalLoadingActivity extends BaseActivity {
         ButterKnife.bind(this);
 
         initListener();
-        //初始化
-        Logger.addLogAdapter(new AndroidLogAdapter());
+        //初始化  放到 application 中
+        //Logger.addLogAdapter(new AndroidLogAdapter());
 
         Logger.d("DigitalLoadingActivityw1");
         //修改打印的TAG
