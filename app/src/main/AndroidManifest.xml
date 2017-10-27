@@ -265,6 +265,9 @@
         <activity android:name=".view_digital_loading.DigitalLoadingActivity"
             android:screenOrientation="portrait" />
 
+        <!--progress_manager 监听网络进度-->
+        <activity android:name=".progress_manager.ProgressManagerActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

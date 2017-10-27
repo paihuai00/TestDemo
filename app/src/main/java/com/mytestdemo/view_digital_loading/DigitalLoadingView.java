@@ -10,6 +10,7 @@ import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 
@@ -211,6 +212,8 @@ public class DigitalLoadingView extends View {
 
         //转换成  360°
         progressNum = num / 100 * 360;
+
+        Log.d(TAG, "setProgressNum: " + progressNum);
 
         //刷新界面(postInvalidate 可以在子线程更新ui)
         postInvalidate();

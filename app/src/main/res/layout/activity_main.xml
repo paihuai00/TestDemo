@@ -509,6 +509,13 @@
                 android:textAllCaps="false" />
 
             <Button
+                android:id="@+id/progress_manager_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ProgressManager监听网络加载进度"
+                android:textAllCaps="false" />
+
+            <Button
                 android:id="@+id/digital_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

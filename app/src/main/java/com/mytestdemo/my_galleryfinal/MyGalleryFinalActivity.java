@@ -8,9 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.mytestdemo.R;
+import com.mytestdemo.view_digital_loading.GlideApp;
 
 import java.io.ByteArrayOutputStream;
 import java.util.List;
@@ -53,10 +55,10 @@ public class MyGalleryFinalActivity extends AppCompatActivity {
                     @Override
                     public void onHanlderSuccess(int reqeustCode, List<PhotoInfo> resultList) {
 
-//                        Glide.with(getBaseContext())
-//                                .load(resultList.get(0).getPhotoPath())
-//                                .error(R.mipmap.ic_launcher)
-//                                .into(my_img);
+                        GlideApp.with(getBaseContext())
+                                .load(resultList.get(0).getPhotoPath())
+                                .error(R.mipmap.ic_launcher)
+                                .into(my_img);
 
                         Bitmap bitmap = BitmapFactory.decodeFile(resultList.get(0).getPhotoPath());
                         bitmap.getHeight();
@@ -70,7 +72,6 @@ public class MyGalleryFinalActivity extends AppCompatActivity {
 
                         Glide.with(getBaseContext())
                                 .load(Bitmap2Bytes(MyBitmapCompress.compressScale(bitmap)))
-                                .error(R.mipmap.ic_launcher)
                                 .into(my_img);
                     }
 

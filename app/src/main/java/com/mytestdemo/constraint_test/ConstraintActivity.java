@@ -41,7 +41,6 @@ public class ConstraintActivity extends BaseActivity {
 
         Glide.with(this)
                 .load(uri)
-                .error(R.mipmap.ic_launcher)
                 .into(tab3);
 
         Log.d(TAG, "onCreate: " + uri.getPath());

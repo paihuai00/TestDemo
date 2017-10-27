@@ -70,6 +70,7 @@ import com.mytestdemo.my_toolbar.MyToolBarActivity;
 import com.mytestdemo.my_view.MyViewActivity;
 import com.mytestdemo.my_web_h5.WebToHtmlActivity;
 import com.mytestdemo.my_zh_photo_choose.ZHPhotoActivity;
+import com.mytestdemo.progress_manager.ProgressManagerActivity;
 import com.mytestdemo.qq_step_count_view.QQStepCountActivity;
 import com.mytestdemo.recyclerview_brvah.BravhActivity;
 import com.mytestdemo.recyclerview_snaphelper.MySnapHelperActivity;
@@ -268,6 +269,21 @@ public class MainActivity extends BaseActivity {
         initCheck();
 
         initDigitalView();
+
+        initProgressManager();
+    }
+
+    private void initProgressManager() {
+
+        Button progress_manager_btn = (Button) findViewById(R.id.progress_manager_btn);
+        progress_manager_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ProgressManagerActivity.class);
+
+                startActivity(intent);
+            }
+        });
     }
 
     private void initDigitalView() {

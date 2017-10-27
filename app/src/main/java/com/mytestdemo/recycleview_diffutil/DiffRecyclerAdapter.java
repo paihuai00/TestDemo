@@ -46,9 +46,7 @@ public class DiffRecyclerAdapter extends RecyclerView.Adapter<DiffRecyclerAdapte
     public void onBindViewHolder(ViewHolder holder, int position) {
         Glide.with(context)
                 .load(list.get(position).getImg_url())
-                .error(R.mipmap.ic_launcher)
                 .into(holder.item_img);
-
         holder.item_txt.setText(list.get(position).getName());
     }
     //DiffUtil  需要重写该方法

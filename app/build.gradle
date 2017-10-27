@@ -50,7 +50,7 @@ dependencies {
     //    compile 'io.reactivex:rxjava:1.0.1'
     compile 'com.yinglan.shadowimageview:shadowimageview:1.0.2'
     compile 'com.android.support:recyclerview-v7:25.2.0'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+//    compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.kyleduo.switchbutton:library:1.4.5'
     compile 'cn.finalteam:galleryfinal:1.4.3'
     compile rootProject.ext.support_v4
@@ -65,9 +65,9 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.5.1'
     compile 'com.android.support:design:25.2.0'
     compile 'com.zhy:autolayout:1.4.5'
-    compile 'com.android.support:appcompat-v7:25.1.1'
+
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
-    compile 'com.squareup.okhttp3:okhttp:3.7.0'
+
     compile 'com.squareup.okhttp3:logging-interceptor:3.7.0'
     compile 'io.reactivex:rxandroid:1.0.1'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
@@ -109,4 +109,13 @@ dependencies {
 
     //底部导航栏
     compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.2'
+
+    //ProgressManager 监听 App 中所有网络链接的上传以及下载进度
+    compile 'me.jessyan:progressmanager:1.5.0'
+    //Glide + okhttp
+    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.github.bumptech.glide:glide:4.2.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.2.0'
+    compile 'com.github.bumptech.glide:okhttp3-integration:4.2.0'
+
 }

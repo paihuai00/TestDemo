@@ -10,6 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bigkoo.pickerview.BuildConfig;
+import com.bumptech.glide.annotation.GlideModule;
+import com.bumptech.glide.module.AppGlideModule;
 import com.kingja.loadsir.core.LoadSir;
 import com.mytestdemo.load_state.callback.CustomCallback;
 import com.mytestdemo.load_state.callback.EmptyCallback;
@@ -23,13 +25,17 @@ import cn.finalteam.galleryfinal.FunctionConfig;
 import cn.finalteam.galleryfinal.GalleryFinal;
 import cn.finalteam.galleryfinal.ImageLoader;
 import cn.finalteam.galleryfinal.ThemeConfig;
+import me.jessyan.progressmanager.ProgressManager;
+import okhttp3.OkHttpClient;
 
 /**
  * Created by cuishuxiang on 2017/4/13.
  */
-
 public class MyAppContext extends Application {
     private static final String TAG = "MyAppContext";
+
+    private OkHttpClient mOkHttpClient;
+
     @Override
     public void onCreate() {
         initLiftcycle();
@@ -43,6 +49,27 @@ public class MyAppContext extends Application {
 
         //配置  不同(网络错误，没有数据。。。)状态的加载
         initState();
+
+
+        initOkhttp();
+    }
+
+    /**
+     * 使用 progressManager 获得加载的百分比
+     */
+    private void initOkhttp() {
+        mOkHttpClient = ProgressManager.getInstance()
+                .with(new OkHttpClient.Builder())
+                .build();
+    }
+
+    public OkHttpClient getOkHttpClient() {
+        if (mOkHttpClient == null) {
+            mOkHttpClient = ProgressManager.getInstance()
+                    .with(new OkHttpClient.Builder())
+                    .build();
+        }
+        return mOkHttpClient;
     }
 
     private void initState() {

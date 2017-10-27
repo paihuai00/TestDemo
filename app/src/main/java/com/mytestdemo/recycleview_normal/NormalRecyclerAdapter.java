@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.mytestdemo.R;
 import com.mytestdemo.recycleview_diffutil.RecycleBean;
+import com.mytestdemo.view_digital_loading.GlideApp;
 
 import java.util.List;
 
@@ -43,7 +43,8 @@ public class NormalRecyclerAdapter extends RecyclerView.Adapter<NormalRecyclerAd
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Glide.with(context)
+
+        GlideApp.with(context)
                 .load(list.get(position).getImg_url())
                 .error(R.mipmap.ic_launcher)
                 .into(holder.item_img);
