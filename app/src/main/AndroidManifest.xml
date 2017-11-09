@@ -268,6 +268,14 @@
         <!--progress_manager 监听网络进度-->
         <activity android:name=".progress_manager.ProgressManagerActivity"
             android:screenOrientation="portrait" />
+
+        <!--合并图片-->
+        <activity android:name=".joint_images.JointImageActivity"
+            android:screenOrientation="portrait" />
+
+        <!--pull 解析xml-->
+        <activity android:name=".pull_xml.PullXmlActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

@@ -46,6 +46,7 @@ public class ZHPhotoActivity extends AppCompatActivity {
 
         selectedList = new ArrayList<>();
         photoPathList = new ArrayList<>();
+
     }
 
     @OnClick(R.id.choose_btn)
@@ -53,7 +54,7 @@ public class ZHPhotoActivity extends AppCompatActivity {
         Matisse.from(this)
                 .choose(MimeType.ofAll(), false)//选择mime类型,
                 .countable(true)
-                .capture(true)
+                .capture(true)//开启拍照
                 .captureStrategy(
                         new CaptureStrategy(true, "com.mytestdemo.fileprovider"))
                 .maxSelectable(5)//最多选择5张图片

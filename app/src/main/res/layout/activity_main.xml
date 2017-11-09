@@ -522,6 +522,20 @@
                 android:text="View - 数字loading"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/joint_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="图片拼接"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/pull_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pull 解析 Xml "
+                android:textAllCaps="false" />
+
             <TextView
                 android:id="@+id/rich_txt"
                 android:layout_width="match_parent"

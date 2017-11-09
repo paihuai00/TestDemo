@@ -58,6 +58,7 @@ public class MyAppContext extends Application {
 
 
         initLogger();
+
     }
 
     private void initLogger() {

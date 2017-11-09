@@ -52,7 +52,6 @@ public class ProgressManagerActivity extends BaseActivity {
 
     @OnClick(R.id.start_btn)
     public void onViewClicked() {
-
         Glide.with(this)
                 .load(mImageUrl)
                 .into(progressImg);

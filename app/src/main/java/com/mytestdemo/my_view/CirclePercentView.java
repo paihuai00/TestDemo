@@ -16,11 +16,11 @@ import com.mytestdemo.R;
 public class CirclePercentView extends View{
     private int mCircleColor,mArcColor,mArcWidth,mPercentTextColor,mPercentTextSize,mRadius;
     public CirclePercentView(Context context) {
-        super(context);
+        this(context,null);
     }
 
     public CirclePercentView(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        this(context, attrs, 0);
     }
 
     public CirclePercentView(Context context, AttributeSet attrs, int defStyleAttr) {

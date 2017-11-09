@@ -21,6 +21,7 @@ import com.mytestdemo.drawable_test.MyDrawableActivity;
 import com.mytestdemo.fish_bezier_view.FishActivity;
 import com.mytestdemo.gpu_fliter.GpuFliterActivity;
 import com.mytestdemo.grid_recyclerview.MyAddaRecycleActivity;
+import com.mytestdemo.joint_images.JointImageActivity;
 import com.mytestdemo.layoutinflater.LayoutInflaterActivity;
 import com.mytestdemo.lazy_fragment.LazyFragmentActivity;
 import com.mytestdemo.load_state.LoadStateActivity;
@@ -71,6 +72,7 @@ import com.mytestdemo.my_view.MyViewActivity;
 import com.mytestdemo.my_web_h5.WebToHtmlActivity;
 import com.mytestdemo.my_zh_photo_choose.ZHPhotoActivity;
 import com.mytestdemo.progress_manager.ProgressManagerActivity;
+import com.mytestdemo.pull_xml.PullXmlActivity;
 import com.mytestdemo.qq_step_count_view.QQStepCountActivity;
 import com.mytestdemo.recyclerview_brvah.BravhActivity;
 import com.mytestdemo.recyclerview_snaphelper.MySnapHelperActivity;
@@ -273,6 +275,36 @@ public class MainActivity extends BaseActivity {
         initDigitalView();
 
         initProgressManager();
+
+        initJointImages();
+
+        initPullXml();
+    }
+
+    private void initPullXml() {
+
+        Button pull_btn = (Button) findViewById(R.id.pull_btn);
+        pull_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, PullXmlActivity.class);
+
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initJointImages() {
+
+        Button joint_btn = (Button) findViewById(R.id.joint_btn);
+        joint_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, JointImageActivity.class);
+
+                startActivity(intent);
+            }
+        });
     }
 
     private void initProgressManager() {
