@@ -38,7 +38,8 @@
                 android:id="@+id/view_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="view的各种test" />
+                android:text="view的各种test"
+                android:textAllCaps="false"/>
 
             <Button
                 android:id="@+id/drawable_btn"

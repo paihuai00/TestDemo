@@ -40,8 +40,19 @@
 
     <com.mytestdemo.view.MyPathView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="300px"
         android:background="@android:color/darker_gray"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spread_view"
+        android:button="@null"
+        android:checked="false"
+        android:background="@drawable/bg_scale_view"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30px"
         />
 
 </LinearLayout>
