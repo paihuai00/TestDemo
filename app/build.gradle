@@ -92,7 +92,7 @@ dependencies {
     compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
     compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'//没有使用特殊Header，可以不加这行
 
-    //recycleView Adapter
+    //recycleView ChooseNumAdapter
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.28'
 
     //滤镜
@@ -121,4 +121,10 @@ dependencies {
 
     //log工具
     compile 'com.orhanobut:logger:2.1.1'
+
+    //弹框
+    compile 'com.orhanobut:dialogplus:1.11@aar'
+
+    //鲁班 图片压缩
+//    compile 'top.zibin:Luban:1.1.3'
 }

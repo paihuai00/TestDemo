@@ -31,8 +31,6 @@ public class LoginModel implements ILoginModel {
                 if (!isError) {
                     onLoginListenter.loginSucceed();
                 }
-
-
             }
         }, 2000);
     }

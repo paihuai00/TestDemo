@@ -17,6 +17,7 @@ import com.mytestdemo.mvp_demo2.view.Mvp2LoginActivity;
  */
 
 public class LoginPersenter implements IPresenter,OnLoginListenter{
+
     private LoginModel loginModel;
     private IloginView iloginView;
 

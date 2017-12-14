@@ -74,7 +74,8 @@ public class PullXmlActivity extends BaseActivity {
         /**
          * 使用Pull 解析xml
          * 获取XmlPullParser 实例，可以通过下面的方式
-         * 也可通过pull解析器工场得到实例方法==》 XmlPullParserFactory.newInstance().newPullParser();
+         * 也可通过pull解析器工场得到实例方法==》
+         * XmlPullParserFactory.newInstance().newPullParser();
          */
         XmlPullParser parser = Xml.newPullParser();
         try {

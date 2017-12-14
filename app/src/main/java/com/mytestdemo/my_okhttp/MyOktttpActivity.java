@@ -122,22 +122,12 @@ public class MyOktttpActivity extends AppCompatActivity {
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                Log.d(TAG, "onFailure: 数据请求失败" + e.getMessage());
+
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                String result = response.body().string();
 
-                initJsonResult(result);
-                Log.d(TAG, "onResponse: 数据请求成功" + result);
-
-                Log.d(TAG, "onResponse: " + response.message());
-
-                //关闭，防止内存泄漏
-                if (response.body() != null) {
-                    response.close();
-                }
             }
         });
     }

@@ -8,5 +8,4 @@ public interface OnLoginListenter {
     void loginSucceed();
 
     void loginError();
-
 }

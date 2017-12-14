@@ -11,16 +11,20 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mytestdemo.behavior_md.BehaviorActivity;
 import com.mytestdemo.bottom_navigation.BottomNavigationActivity;
+import com.mytestdemo.choose_num.ChooseNumActivity;
 import com.mytestdemo.city_loadview.CityLoadActivity;
 import com.mytestdemo.clip_demo.ClipActivity;
 import com.mytestdemo.constraint_test.ConstraintActivity;
 import com.mytestdemo.custom_dialog.CustomDialogTestActivity;
+import com.mytestdemo.dialogplus_edit.DialogEditActivity;
 import com.mytestdemo.drag_message_bomb.MessageBombActivity;
 import com.mytestdemo.drawable_test.MyDrawableActivity;
 import com.mytestdemo.fish_bezier_view.FishActivity;
 import com.mytestdemo.gpu_fliter.GpuFliterActivity;
 import com.mytestdemo.grid_recyclerview.MyAddaRecycleActivity;
+import com.mytestdemo.image_select.ImageSelectActivity;
 import com.mytestdemo.joint_images.JointImageActivity;
 import com.mytestdemo.layoutinflater.LayoutInflaterActivity;
 import com.mytestdemo.lazy_fragment.LazyFragmentActivity;
@@ -116,7 +120,7 @@ public class MainActivity extends BaseActivity {
     private Button fliter_btn;
     private Button city_btn, qq_count_btn, sidebar_btn, xiaomi_btn, sidebar_high_btn, base_recycler_btn;
 
-    private Button constraint_btn, clip_btn, bravh_btn, load_state_btn, bottom_navigation_btn;
+    private Button constraint_btn, clip_btn, bravh_btn, load_state_btn, bottom_navigation_btn,choose_num_btn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -279,6 +283,62 @@ public class MainActivity extends BaseActivity {
         initJointImages();
 
         initPullXml();
+
+        initDialogEdit();
+
+        initBehavior();
+
+        initImgSelect();
+
+        initChooseNum();
+    }
+
+    private void initChooseNum() {
+
+        Button choose_num_btn = (Button) findViewById(R.id.choose_num_btn);
+        choose_num_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ChooseNumActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initImgSelect() {
+
+        Button img_selecter_btn = (Button) findViewById(R.id.img_selecter_btn);
+        img_selecter_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ImageSelectActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initBehavior() {
+
+        Button behavior_btn = (Button) findViewById(R.id.behavior_btn);
+        behavior_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, BehaviorActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initDialogEdit() {
+
+        Button dialog_edit_btn = (Button) findViewById(R.id.dialog_edit_btn);
+        dialog_edit_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, DialogEditActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initPullXml() {

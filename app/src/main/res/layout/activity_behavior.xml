@@ -1,0 +1,68 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="RtlHardcoded">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/main.toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:background="@color/colorAccent"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="600px"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_bg_img"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.9" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:text="标题"
+                android:background="@android:color/holo_red_dark"
+                android:gravity="center"
+                android:padding="15px"
+                android:textColor="@android:color/white"
+                app:layout_behavior="com.mytestdemo.behavior_md.EasyBehavior"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listview"
+            />
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="25px"
+        android:layout_marginRight="25px"
+        app:layout_behavior="com.mytestdemo.behavior_md.MyFabBehavior" />
+
+</android.support.design.widget.CoordinatorLayout>

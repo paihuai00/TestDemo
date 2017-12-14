@@ -276,6 +276,25 @@
         <!--pull 解析xml-->
         <activity android:name=".pull_xml.PullXmlActivity"
             android:screenOrientation="portrait" />
+
+        <!--dialog plus 的弹出框-->
+        <activity android:name=".dialogplus_edit.DialogEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!--自定义 图片选择器-->
+        <activity android:name=".image_select.ImageSelectActivity"
+            android:screenOrientation="portrait" />
+
+        <!--自定义 Behavior-->
+        <activity
+            android:name=".behavior_md.BehaviorActivity"
+            android:screenOrientation="portrait" />
+
+
+        <!--打分的自定义View-->
+        <activity android:name=".choose_num.ChooseNumActivity" />
+
     </application>
 
 </manifest>

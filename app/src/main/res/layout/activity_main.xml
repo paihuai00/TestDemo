@@ -537,6 +537,34 @@
                 android:text="Pull 解析 Xml "
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/dialog_edit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DialogPlus弹出输入框"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/behavior_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="自定义 Behavior"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/img_selecter_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="自定义 图片选择器"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/choose_num_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="选择分数View"
+                android:textAllCaps="false" />
+
             <TextView
                 android:id="@+id/rich_txt"
                 android:layout_width="match_parent"
