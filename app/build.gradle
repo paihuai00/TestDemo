@@ -99,7 +99,7 @@ dependencies {
     compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
 
     //图片裁剪
-    compile 'com.github.yalantis:ucrop:2.2.1'
+//    compile 'com.github.yalantis:ucrop:2.2.1'
 
     //BRVAH是一个强大的RecyclerAdapter框架
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.28'
