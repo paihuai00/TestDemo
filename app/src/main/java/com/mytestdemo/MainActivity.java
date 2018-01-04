@@ -87,6 +87,7 @@ import com.mytestdemo.table_viewpager.MyTabViewPagerActivity;
 import com.mytestdemo.tree_list_view.TreeListActivity;
 import com.mytestdemo.view_check.CheckActivity;
 import com.mytestdemo.view_digital_loading.DigitalLoadingActivity;
+import com.mytestdemo.wifi_demo.WifiActivity;
 import com.mytestdemo.xiaomi_loading_view.XiaoMiLoadActivity;
 import com.mytestdemo.yahoo_ball_loadingview.YahooLoadActivity;
 import com.zzhoujay.richtext.RichText;
@@ -291,6 +292,19 @@ public class MainActivity extends BaseActivity {
         initImgSelect();
 
         initChooseNum();
+
+        initWifi();
+    }
+
+    private void initWifi() {
+        Button wifi_btn = (Button) findViewById(R.id.wifi_btn);
+        wifi_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, WifiActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initChooseNum() {

@@ -565,6 +565,13 @@
                 android:text="选择分数View"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/wifi_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="WiFi相关"
+                android:textAllCaps="false" />
+
             <TextView
                 android:id="@+id/rich_txt"
                 android:layout_width="match_parent"

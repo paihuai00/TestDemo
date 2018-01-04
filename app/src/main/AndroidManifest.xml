@@ -295,6 +295,9 @@
         <!--打分的自定义View-->
         <activity android:name=".choose_num.ChooseNumActivity" />
 
+        <!--wifi  demo-->
+        <activity android:name=".wifi_demo.WifiActivity" />
+
     </application>
 
 </manifest>
