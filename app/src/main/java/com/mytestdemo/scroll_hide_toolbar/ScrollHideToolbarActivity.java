@@ -60,11 +60,11 @@ public class ScrollHideToolbarActivity extends BaseActivity {
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
 
-                //上滑动        dy -
-                // 下滑 (隐藏)  dy +
+                //上滑动  (隐藏)  dy -
+                // 下滑           dy +
                 //只做简单处理
 
-                alpha = dy > 0 ? 0: 1;
+                alpha = dy > 0 ? 1: 0;
 
                 Log.d(TAG, "onScrolled: " + " dy = " + dy + "  alpha = " + alpha);
 
