@@ -25,7 +25,7 @@ import java.util.List;
 public class WifiRvListAdapter extends RecyclerView.Adapter<WifiRvListAdapter.ViewHolder> {
 
     private Context context;
-    private List<WifiMessageBean> scanResultList;
+    private List<WifiInfoBean> wifiInfoBeanList;
     private WifiInfo connectedWifiInfo;
 
     public void setConnectWifiInfo(WifiInfo wifiInfo) {
@@ -33,9 +33,9 @@ public class WifiRvListAdapter extends RecyclerView.Adapter<WifiRvListAdapter.Vi
         notifyDataSetChanged();
     }
 
-    public WifiRvListAdapter(Context context, List<WifiMessageBean> scanResultList) {
+    public WifiRvListAdapter(Context context, List<WifiInfoBean> wifiInfoBeanList) {
         this.context = context;
-        this.scanResultList = scanResultList;
+        this.wifiInfoBeanList = wifiInfoBeanList;
     }
 
     @Override
@@ -51,9 +51,9 @@ public class WifiRvListAdapter extends RecyclerView.Adapter<WifiRvListAdapter.Vi
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        ScanResult scanResult = scanResultList.get(position).scanResult;
-        int security_type = scanResultList.get(position).security_type;
-        int level = scanResultList.get(position).level;
+        ScanResult scanResult = wifiInfoBeanList.get(position).getScanResult();
+        int security_type = wifiInfoBeanList.get(position).getSecurityType();
+        int level = wifiInfoBeanList.get(position).getLevel();
 
         holder.wifi_name.setText(scanResult.SSID);
 
@@ -108,7 +108,7 @@ public class WifiRvListAdapter extends RecyclerView.Adapter<WifiRvListAdapter.Vi
 
     @Override
     public int getItemCount() {
-        return scanResultList == null ? 0 : scanResultList.size();
+        return wifiInfoBeanList == null ? 0 : wifiInfoBeanList.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
