@@ -82,6 +82,7 @@ import com.mytestdemo.recyclerview_brvah.BravhActivity;
 import com.mytestdemo.recyclerview_snaphelper.MySnapHelperActivity;
 import com.mytestdemo.recycleview_diffutil.MyRecycleViewActivity;
 import com.mytestdemo.recycleview_normal.NormalRecycleViewActivity;
+import com.mytestdemo.scroll_hide_toolbar.ScrollHideToolbarActivity;
 import com.mytestdemo.smart_recyclerview.SmartRecyclerViewActivity;
 import com.mytestdemo.table_viewpager.MyTabViewPagerActivity;
 import com.mytestdemo.tree_list_view.TreeListActivity;
@@ -294,7 +295,22 @@ public class MainActivity extends BaseActivity {
         initChooseNum();
 
         initWifi();
+
+        initScrollHideToolbar();
     }
+
+    private void initScrollHideToolbar() {
+
+        Button hide_toolbar_btn = (Button) findViewById(R.id.hide_toolbar_btn);
+        hide_toolbar_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ScrollHideToolbarActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
 
     private void initWifi() {
         Button wifi_btn = (Button) findViewById(R.id.wifi_btn);

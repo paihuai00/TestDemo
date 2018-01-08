@@ -4,7 +4,10 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.View;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.mytestdemo.BaseActivity;
 import com.mytestdemo.R;
 import com.mytestdemo.smart_recyclerview.SmartRecyclerAdapter;
@@ -24,7 +27,7 @@ import butterknife.ButterKnife;
  */
 
 public class BravhActivity extends BaseActivity {
-
+    private static final String TAG = "BravhActivity";
     @BindView(R.id.bravh_recycler)
     RecyclerView bravhRecycler;
     private List<String> stringList;
@@ -56,7 +59,21 @@ public class BravhActivity extends BaseActivity {
 
         bravhRecycler.addItemDecoration(new TimeLineItemDecoration2(this, 20));
 
-        bravhRecycler.setAdapter(smartRecyclerAdapter);
+        adapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
+            @Override
+            public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
+                Log.d(TAG, "onItemChildClick: ");
+            }
+        });
+        
+        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                Log.d(TAG, "onItemClick: ");
+            }
+        });
+
+        bravhRecycler.setAdapter(adapter);
     }
 
 }

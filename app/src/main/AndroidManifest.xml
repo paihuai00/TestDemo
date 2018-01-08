@@ -304,6 +304,10 @@
         <!--wifi  demo-->
         <activity android:name=".wifi_demo.WifiActivity" />
 
+
+        <!--滑动隐藏 toolbar-->
+        <activity android:name=".scroll_hide_toolbar.ScrollHideToolbarActivity" />
+
     </application>
 
 </manifest>

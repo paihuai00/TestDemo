@@ -572,6 +572,13 @@
                 android:text="WiFi相关"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/hide_toolbar_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rv滑动隐藏Toolbar"
+                android:textAllCaps="false" />
+
             <TextView
                 android:id="@+id/rich_txt"
                 android:layout_width="match_parent"
