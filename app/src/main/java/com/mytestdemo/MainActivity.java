@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.mytestdemo.behavior_md.BehaviorActivity;
 import com.mytestdemo.bottom_navigation.BottomNavigationActivity;
 import com.mytestdemo.choose_num.ChooseNumActivity;
@@ -30,6 +31,7 @@ import com.mytestdemo.layoutinflater.LayoutInflaterActivity;
 import com.mytestdemo.lazy_fragment.LazyFragmentActivity;
 import com.mytestdemo.load_state.LoadStateActivity;
 import com.mytestdemo.loading_view.LoadingActivity;
+import com.mytestdemo.multi_state_views.MultiStateActivity;
 import com.mytestdemo.mvp_demo2.view.Mvp2LoginActivity;
 import com.mytestdemo.my_animator.MyAnimatorActivity;
 import com.mytestdemo.my_animator.ValueAnimatorActivity;
@@ -87,13 +89,12 @@ import com.mytestdemo.smart_recyclerview.SmartRecyclerViewActivity;
 import com.mytestdemo.table_viewpager.MyTabViewPagerActivity;
 import com.mytestdemo.tree_list_view.TreeListActivity;
 import com.mytestdemo.view_check.CheckActivity;
+import com.mytestdemo.circle_menu_group.CircleMenuActivity;
 import com.mytestdemo.view_digital_loading.DigitalLoadingActivity;
 import com.mytestdemo.wifi_demo.WifiActivity;
 import com.mytestdemo.xiaomi_loading_view.XiaoMiLoadActivity;
 import com.mytestdemo.yahoo_ball_loadingview.YahooLoadActivity;
 import com.zzhoujay.richtext.RichText;
-
-import java.util.logging.Logger;
 
 /**
  * Created by cuishuxiang on 2017/3/30.
@@ -297,6 +298,33 @@ public class MainActivity extends BaseActivity {
         initWifi();
 
         initScrollHideToolbar();
+
+        initMultiState();
+
+        initCircleMenu();
+    }
+
+    private void initCircleMenu() {
+        Button circle_menu_btn = (Button) findViewById(R.id.circle_menu_btn);
+        circle_menu_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CircleMenuActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initMultiState() {
+
+        Button multi_state_btn = (Button) findViewById(R.id.multi_state_btn);
+        multi_state_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MultiStateActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initScrollHideToolbar() {

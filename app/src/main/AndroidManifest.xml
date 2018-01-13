@@ -308,6 +308,13 @@
         <!--滑动隐藏 toolbar-->
         <activity android:name=".scroll_hide_toolbar.ScrollHideToolbarActivity" />
 
+
+        <!--多状态 布局-->
+        <activity android:name=".multi_state_views.MultiStateActivity" />
+
+        <!--自定义ViewGroup,绘制圆形-->
+        <activity android:name=".circle_menu_group.CircleMenuActivity" />
+
     </application>
 
 </manifest>

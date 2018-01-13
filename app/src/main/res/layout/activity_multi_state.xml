@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:id="@+id/loading_btn"
+            android:text="加载状态"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:id="@+id/error_btn"
+            android:text="网络断开状态"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:text="空状态"
+            android:id="@+id/empty_btn"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:id="@+id/success_btn"
+            android:text="成功状态"
+            android:layout_height="wrap_content" />
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.classic.common.MultipleStatusView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/multi_state_view"
+        app:loadingView="@layout/layout_loading"
+        app:emptyView="@layout/layout_empty"
+        app:errorView="@layout/layout_error"
+        app:contentView="@layout/layout_content"
+        />
+
+</com.zhy.autolayout.AutoLinearLayout>

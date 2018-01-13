@@ -4,11 +4,11 @@ import android.app.Activity;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
 
-import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.Request;
 import com.bumptech.glide.request.target.ImageViewTarget;
 import com.mytestdemo.view_digital_loading.GlideApp;
+
 
 import cn.finalteam.galleryfinal.widget.GFImageView;
 

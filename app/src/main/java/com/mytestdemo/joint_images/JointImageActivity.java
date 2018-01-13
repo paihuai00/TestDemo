@@ -64,7 +64,7 @@ public class JointImageActivity extends BaseActivity {
 //                .forResult(1);//作为标记的 请求码
 
         Matisse.from(JointImageActivity.this)
-                .choose(MimeType.ofAll())
+                .choose(MimeType.allOf())
                 .countable(true)
                 .maxSelectable(9)
 

@@ -579,6 +579,20 @@
                 android:text="Rv滑动隐藏Toolbar"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/multi_state_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="多状态Views"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/circle_menu_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="环形menu"
+                android:textAllCaps="false" />
+
             <TextView
                 android:id="@+id/rich_txt"
                 android:layout_width="match_parent"
