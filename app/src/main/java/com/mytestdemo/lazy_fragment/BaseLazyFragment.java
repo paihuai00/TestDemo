@@ -1,6 +1,7 @@
 package com.mytestdemo.lazy_fragment;
 
 import android.support.v4.app.Fragment;
+import android.util.Log;
 
 /**
  * Created by cuishuxiang on 2017/3/30.
@@ -10,6 +11,7 @@ import android.support.v4.app.Fragment;
  */
 
 public abstract class BaseLazyFragment extends Fragment {
+    public static final String TAG = "BaseLazyFragment";
     // 标志位，标志Fragment已经初始化完成。
     public boolean isPrepared = false;//设置为public
     protected boolean isVisible = false;
@@ -21,6 +23,7 @@ public abstract class BaseLazyFragment extends Fragment {
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
+        Log.d(TAG, "setUserVisibleHint: " + isVisibleToUser);
         if (isVisibleToUser) {
             isVisible = true;
             lazyLoad();

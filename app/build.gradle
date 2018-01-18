@@ -130,4 +130,7 @@ dependencies {
 
     //多状态 https://github.com/qyxxjd/MultipleStatusView
     compile  'com.classic.common:multiple-status-view:1.4'
+
+    //树状 view
+    compile 'com.github.bmelnychuk:atv:1.2.+'
 }

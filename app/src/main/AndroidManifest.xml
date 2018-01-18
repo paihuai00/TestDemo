@@ -315,6 +315,9 @@
         <!--自定义ViewGroup,绘制圆形-->
         <activity android:name=".circle_menu_group.CircleMenuActivity" />
 
+        <!--树形View-->
+        <activity android:name=".tree_view.TreeViewActivity" />
+
     </application>
 
 </manifest>

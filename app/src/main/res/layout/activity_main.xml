@@ -15,6 +15,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_circle_txt"
+                android:text="2"
+                android:textColor="@android:color/white"
+                android:gravity="center"/>
+
             <Button
                 android:id="@+id/lazy_btn"
                 android:layout_width="match_parent"
@@ -39,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="view的各种test"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/drawable_btn"
@@ -503,6 +511,13 @@
                 android:textAllCaps="false" />
 
             <Button
+                android:id="@+id/tree_btn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="树形可展开控件2"
+                android:textAllCaps="false" />
+
+            <Button
                 android:id="@+id/check_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -592,6 +607,7 @@
                 android:layout_height="wrap_content"
                 android:text="环形menu"
                 android:textAllCaps="false" />
+
 
             <TextView
                 android:id="@+id/rich_txt"

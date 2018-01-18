@@ -88,6 +88,7 @@ import com.mytestdemo.scroll_hide_toolbar.ScrollHideToolbarActivity;
 import com.mytestdemo.smart_recyclerview.SmartRecyclerViewActivity;
 import com.mytestdemo.table_viewpager.MyTabViewPagerActivity;
 import com.mytestdemo.tree_list_view.TreeListActivity;
+import com.mytestdemo.tree_view.TreeViewActivity;
 import com.mytestdemo.view_check.CheckActivity;
 import com.mytestdemo.circle_menu_group.CircleMenuActivity;
 import com.mytestdemo.view_digital_loading.DigitalLoadingActivity;
@@ -302,6 +303,20 @@ public class MainActivity extends BaseActivity {
         initMultiState();
 
         initCircleMenu();
+
+        initTreeView();
+    }
+
+    private void initTreeView() {
+
+        Button tree_btn2 = (Button) findViewById(R.id.tree_btn2);
+        tree_btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, TreeViewActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initCircleMenu() {
