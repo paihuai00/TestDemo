@@ -58,4 +58,16 @@ public class MyCounterView extends View implements View.OnClickListener{
     }
 
 
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+
+        int wSize = MeasureSpec.getSize(widthMeasureSpec);//获取宽度的size
+        int wMode = MeasureSpec.getMode(widthMeasureSpec);//宽度测量的mode
+
+        int hSize = MeasureSpec.getSize(heightMeasureSpec);
+        int hMode = MeasureSpec.getMode(heightMeasureSpec);
+
+    }
+
 }

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -19,6 +20,7 @@ import com.mytestdemo.R;
  * 环形 menu
  */
 public class CircleMenuLayout extends ViewGroup {
+	private static final String TAG = "CircleMenuLayout";
 	private int mRadius;
 	/**
 	 * 该容器内child item的默认尺寸
@@ -171,6 +173,8 @@ public class CircleMenuLayout extends ViewGroup {
 	 */
 	@Override
 	protected void onLayout(boolean changed, int l, int t, int r, int b) {
+		mStartAngle = 270;
+		Log.d(TAG, "onLayout: mRadius = " + mRadius);
 		int layoutRadius = mRadius;
 
 		// Laying out the child views

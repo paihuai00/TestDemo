@@ -5,7 +5,7 @@
 
     <com.mytestdemo.circle_menu_group.CircleMenuLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="500px"
         android:id="@+id/circle_menu_layout">
         <ImageView
             android:layout_width="wrap_content"
@@ -14,5 +14,51 @@
             android:id="@+id/id_circle_menu_item_center"/>
 
     </com.mytestdemo.circle_menu_group.CircleMenuLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/circle_menu_layout"
+        android:text="改变中心图片"
+        android:id="@+id/change_btn"/>
+
+    <com.mytestdemo.circle_menu_group.SimpleViewGroup
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:id="@+id/simple_viewgroup"
+        android:background="@color/gray"
+        android:layout_below="@+id/change_btn">
+
+        <TextView
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:text="0"
+            android:textColor="@color/white"
+            android:background="@color/black"/>
+        <TextView
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:text="1"
+            android:textColor="@color/white"
+            android:background="@color/bleu"/>
+
+        <TextView
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:text="2"
+            android:textColor="@color/white"
+            android:background="@color/red"/>
+
+        <TextView
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:text="3"
+            android:textColor="@color/white"
+            android:layout_marginRight="33px"
+            android:layout_marginLeft="33px"
+            android:background="@color/green"/>
+
+
+    </com.mytestdemo.circle_menu_group.SimpleViewGroup>
 
 </com.zhy.autolayout.AutoRelativeLayout>
