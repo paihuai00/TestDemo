@@ -1,5 +1,6 @@
 package com.mytestdemo.table_viewpager;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -7,9 +8,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.mytestdemo.R;
 
@@ -18,6 +21,8 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import q.rorbin.badgeview.Badge;
+import q.rorbin.badgeview.QBadgeView;
 
 /**
  * TabLayout  +ViewPager
@@ -110,6 +115,11 @@ public class MyTabViewPagerActivity extends AppCompatActivity implements View.On
                 R.drawable.select_tab_img,
                 R.drawable.select_tab_img};
 
+        String[] mStrings = new String[]{"语文", "数学", "英语"};
+        String[] mIndicatorString = new String[]{"1", "2", "3"};
+        private TextView txt_title;
+        private RedPoint indicator_txt;
+
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);
         }
@@ -126,15 +136,43 @@ public class MyTabViewPagerActivity extends AppCompatActivity implements View.On
 
 
         public View getTabView(int positon) {
-            View view = LayoutInflater.from(getBaseContext()).inflate(R.layout.item_tab_view, null);
+//            View view = LayoutInflater.from(getBaseContext()).inflate(R.layout.item_tab_view, null);
+//            ImageView imageView = (ImageView) view.findViewById(R.id.tab_img);
+//            imageView.setImageResource(imgs[positon]);
+//            return view;
+            View view = null;
+            Badge badge = null;
+            if (view == null) {
+                view = LayoutInflater.from(getBaseContext()).inflate(R.layout.item_tab, null, false);
+                txt_title = (TextView) view.findViewById(R.id.txt_title);
+                indicator_txt = (RedPoint) view.findViewById(R.id.indicator_txt);
 
-            ImageView imageView = (ImageView) view.findViewById(R.id.tab_img);
+                badge = new QBadgeView(getBaseContext());
+                badge.bindTarget(txt_title);
 
-            imageView.setImageResource(imgs[positon]);
+            }
 
+//            if (mIndicatorString[positon].equals("1")) {
+//                indicator_txt.setVisibility(View.INVISIBLE);
+//            } else {
+//                indicator_txt.setVisibility(View.VISIBLE);
+//            }
+            txt_title.setText(mStrings[positon]);
+
+            indicator_txt.setMiddleText(mIndicatorString[positon]);
+
+            badge.setBadgeGravity(Gravity.TOP | Gravity.END);
+            badge.setBadgeTextColor(Color.WHITE);
+            badge.setBadgeBackgroundColor(Color.RED);
+            badge.setBadgeTextSize(5, true);
+            badge.setBadgeText(mIndicatorString[positon]);
             return view;
         }
 
+//        @Override
+//        public CharSequence getPageTitle(int position) {
+//            return mStrings[position];
+//        }
 
     }
 

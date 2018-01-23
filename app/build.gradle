@@ -133,4 +133,7 @@ dependencies {
 
     //树状 view
     compile 'com.github.bmelnychuk:atv:1.2.+'
+
+    //消息红点 https://github.com/qstumn/BadgeView
+    compile 'q.rorbin:badgeview:1.1.3'
 }

@@ -105,8 +105,6 @@ public class MainActivity extends BaseActivity {
     private final String TAG = MainActivity.class.getSimpleName();
     private Button lazy_btn;//懒加载
 
-
-
     private Button recycler_btn,normal_recycler_btn,view_btn,drawable_btn,grid_btn;
     private Button snaphelper_btn,switch_btn,grid_viewpager,state_btn,state_btn2,align_txt,pickerview_txt;
     private Button galleryfinal_txt,toolbar_txt,rx_txt,radar_txt,animator_txt,fab_txt,navigation_txt,navigation_txt2,gesturelock_txt;
