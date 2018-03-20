@@ -48,6 +48,9 @@ public class LazyFragmentActivity extends AppCompatActivity {
 
         adapter = new FragmentAdapter(getSupportFragmentManager(), fragmentList);
         viewpager.setAdapter(adapter);
+
+        //页面缓存，不会重新加载多次
+        viewpager.setOffscreenPageLimit(3);
     }
 
     @Override

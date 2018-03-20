@@ -44,6 +44,13 @@ public class LazyTestFragment1 extends BaseLazyFragment {
         loadData();
         return view;
     }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        Log.d("Fragment-1", "onViewCreated: ");
+    }
+
     @Override
     protected void loadData() {
         if (!isVisible || !isPrepared) {

@@ -38,10 +38,16 @@ public class LazyTestFragment4 extends BaseLazyFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_lazy_layout, container, false);
-        Log.e("Fragment4", "onCreateView");
+        Log.e("Fragment-4", "onCreateView");
         isPrepared = true;
         loadData();
         return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        Log.d("Fragment-4", "onViewCreated: ");
     }
 
     @Override

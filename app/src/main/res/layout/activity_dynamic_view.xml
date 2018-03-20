@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/btn_vg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/add_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="添加 ImageView"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/add_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="添加 TextView"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/add_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="添加 EditText"
+            android:textAllCaps="false" />
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/xml_tv"
+        android:gravity="center"
+        android:layout_below="@+id/btn_vg"
+        android:text="这是35px的字体，xml添加的"
+        android:background="@color/red"
+        android:textSize="35px"/>
+    
+    
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text"
+        android:text="ceshi"
+        android:layout_below="@+id/xml_tv"
+        android:background="@color/bleu"
+        />
+
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_progress"
+        android:layout_below="@+id/edit_text"
+        android:progressDrawable="@drawable/bg_progress_state"
+        style="@android:style/Widget.ProgressBar.Horizontal"/>
+
+</com.zhy.autolayout.AutoRelativeLayout>

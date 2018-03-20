@@ -53,6 +53,12 @@ public class LazyTestFragment3 extends BaseLazyFragment {
         text.setText("--------------------3----------------------");
 
     }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        Log.d("Fragment-3", "onViewCreated: ");
+    }
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.classic.common.MultipleStatusView;
 import com.mytestdemo.BaseActivity;
@@ -41,6 +42,13 @@ public class MultiStateActivity extends BaseActivity {
 
 
         multiStateView.showContent();
+
+        multiStateView.setOnRetryClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getBaseContext(), "点击了" + v.getId(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 

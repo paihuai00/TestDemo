@@ -1,0 +1,7 @@
+<resources>
+    <string name="str_wechat_monents">朋友圈</string>
+    <string name="str_wechat">微信</string>
+    <string name="str_qq">QQ</string>
+    <string name="str_weibo">微博</string>
+    <string name="str_cancel">取消</string>
+</resources>

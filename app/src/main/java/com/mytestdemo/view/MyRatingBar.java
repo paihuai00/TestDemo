@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -141,4 +142,6 @@ public class MyRatingBar extends LinearLayout implements View.OnClickListener{
     public void onClick(View view) {
         fillingImage((Integer) view.getTag());
     }
+
+
 }

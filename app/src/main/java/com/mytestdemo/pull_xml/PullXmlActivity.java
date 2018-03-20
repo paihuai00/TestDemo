@@ -105,14 +105,19 @@ public class PullXmlActivity extends BaseActivity {
         });
     }
 
+    /**
+     * 解析xml数据
+     * @param stringReader  需要解析的xml
+     */
     private void initPullXml(StringReader stringReader) {
         try {
+            //获取pull解析器的实例
             XmlPullParser pullParser = XmlPullParserFactory.newInstance().newPullParser();
 
             pullParser.setInput(stringReader);
 
             int eventType = pullParser.getEventType();
-            Log.d(TAG, "initPullXml: eventType : " + eventType);
+            Log.d(TAG, "Pull: eventType : " + eventType);
 
             while (eventType != XmlPullParser.END_DOCUMENT) {
                 switch (eventType) {

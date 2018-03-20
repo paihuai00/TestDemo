@@ -14,6 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <Button
                 android:id="@+id/lazy_btn"
                 android:layout_width="match_parent"
@@ -599,6 +600,19 @@
                 android:text="环形menu"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/share_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="分享"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/dynamic_view_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="动态添加View"
+                android:textAllCaps="false" />
 
             <TextView
                 android:id="@+id/rich_txt"

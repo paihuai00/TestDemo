@@ -1,7 +1,7 @@
 ext {
     android = [
             applicationId = "com.mytestdemo",
-            compileSdkVersion = 25,
+            compileSdkVersion = 26,
             buildToolsVersion = "26.0.1",
             minSdkVersion = 16,
             targetSdkVersion = 22,
@@ -9,7 +9,7 @@ ext {
             versionName = "1.0"
     ]
 
-    version_support = "25.3.0"
+    version_support = "26.0.1"
 
     dependencies = [
             support_v4 = "com.android.support:support-v4:${version_support}",

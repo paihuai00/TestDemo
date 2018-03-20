@@ -16,9 +16,6 @@
         app:shadowSrc="@drawable/ic_shadow"/>
 
 
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,12 +51,12 @@
             app:shadowRound="20dp"
             app:shadowSrc="@drawable/ic_shadow"/>
 
-        <com.yinglan.shadowimageview.ShadowImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/shadow_img"
-            app:shadowRound="20dp"
-            app:shadowSrc="@drawable/ic_shadow"/>
+        <!--<com.yinglan.shadowimageview.ShadowImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/shadow_img"-->
+            <!--app:shadowRound="20dp"-->
+            <!--app:shadowSrc="@drawable/ic_shadow"/>-->
 
     </LinearLayout>
 

@@ -3,11 +3,11 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:gravity="center"
-              android:id="@+id/ll_error"
+              android:id="@+id/error_retry_view"
               android:orientation="vertical">
 
     <ImageView
-     android:layout_marginBottom="4dp"
+        android:layout_marginBottom="4dp"
         android:layout_width="100dp"
         android:layout_height="80dp"
         android:background="@drawable/error"/>

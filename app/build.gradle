@@ -24,9 +24,11 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':pickerview')
+    compile project(':shareSdk')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
     //图片选择器
 
     //字体对齐
@@ -50,13 +52,16 @@ dependencies {
     //    compile 'io.reactivex:rxjava:1.0.1'
     compile 'com.yinglan.shadowimageview:shadowimageview:1.0.2'
     compile 'com.android.support:recyclerview-v7:25.2.0'
-//    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    //    compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.kyleduo.switchbutton:library:1.4.5'
     compile 'cn.finalteam:galleryfinal:1.4.3'
     compile rootProject.ext.support_v4
     compile rootProject.ext.support_v7
-//    compile 'com.android.support:appcompat-v7:25.1.1'
-//    compile 'com.android.support:support-v4:25.1.1'
+
+    //    compile 'com.android.support:appcompat-v7:25.1.1'
+
+    //    compile 'com.android.support:support-v4:25.1.1'
     compile 'me.codeboy.android:align-text-view:2.3.0'
     compile 'cn.finalteam.rxgalleryfinal:library:1.0.1'
     compile 'com.zhy:base-rvadapter:3.0.3'
@@ -65,9 +70,7 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.5.1'
     compile 'com.android.support:design:25.2.0'
     compile 'com.zhy:autolayout:1.4.5'
-
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
-
     compile 'com.squareup.okhttp3:logging-interceptor:3.7.0'
     compile 'io.reactivex:rxandroid:1.0.1'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
@@ -76,7 +79,6 @@ dependencies {
     compile 'com.zzhoujay.richtext:richtext:2.5.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.github.Aspsine:IRecyclerView:0.0.5'
-
     compile 'com.andrognito.patternlockview:patternlockview:1.0.0'
     compile 'com.stkent:polygondrawingutil:1.0.0'
     compile 'com.willowtreeapps.spruce:spruce-android:1.0.1'
@@ -90,7 +92,9 @@ dependencies {
 
     //智能上下拉，刷新
     compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
-    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'//没有使用特殊Header，可以不加这行
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'
+
+    //没有使用特殊Header，可以不加这行
 
     //recycleView ChooseNumAdapter
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.28'
@@ -99,7 +103,8 @@ dependencies {
     compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
 
     //图片裁剪
-//    compile 'com.github.yalantis:ucrop:2.2.1'
+
+    //    compile 'com.github.yalantis:ucrop:2.2.1'
 
     //BRVAH是一个强大的RecyclerAdapter框架
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.28'
@@ -112,12 +117,12 @@ dependencies {
 
     //ProgressManager 监听 App 中所有网络链接的上传以及下载进度
     compile 'me.jessyan:progressmanager:1.5.0'
+
     //Glide + okhttp
     compile 'com.squareup.okhttp3:okhttp:3.9.0'
     compile 'com.github.bumptech.glide:glide:4.2.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.2.0'
     compile 'com.github.bumptech.glide:okhttp3-integration:4.2.0'
-
 
     //log工具
     compile 'com.orhanobut:logger:2.1.1'
@@ -126,14 +131,16 @@ dependencies {
     compile 'com.orhanobut:dialogplus:1.11@aar'
 
     //鲁班 图片压缩
-//    compile 'top.zibin:Luban:1.1.3'
+
+    //    compile 'top.zibin:Luban:1.1.3'
 
     //多状态 https://github.com/qyxxjd/MultipleStatusView
-    compile  'com.classic.common:multiple-status-view:1.4'
+    compile 'com.classic.common:multiple-status-view:1.4'
 
     //树状 view
     compile 'com.github.bmelnychuk:atv:1.2.+'
 
     //消息红点 https://github.com/qstumn/BadgeView
     compile 'q.rorbin:badgeview:1.1.3'
+
 }

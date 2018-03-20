@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--自定义progressbar，背景灰色，进度蓝色-->
+
+    <!--id必须使用系统的id-->
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="#ecebe9" />
+
+            <corners android:radius="40dp" />
+        </shape>
+    </item>
+
+
+    <item android:id="@android:id/progress">
+
+        <clip>
+            <shape>
+                <solid android:color="#097bf5" />
+                <corners android:radius="40dp" />
+            </shape>
+        </clip>
+
+    </item>
+</layer-list>

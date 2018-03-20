@@ -1,5 +1,6 @@
 package com.mytestdemo;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ import com.mytestdemo.custom_dialog.CustomDialogTestActivity;
 import com.mytestdemo.dialogplus_edit.DialogEditActivity;
 import com.mytestdemo.drag_message_bomb.MessageBombActivity;
 import com.mytestdemo.drawable_test.MyDrawableActivity;
+import com.mytestdemo.dynamic_add_view.DynamicViewActivity;
 import com.mytestdemo.fish_bezier_view.FishActivity;
 import com.mytestdemo.gpu_fliter.GpuFliterActivity;
 import com.mytestdemo.grid_recyclerview.MyAddaRecycleActivity;
@@ -85,6 +87,7 @@ import com.mytestdemo.recyclerview_snaphelper.MySnapHelperActivity;
 import com.mytestdemo.recycleview_diffutil.MyRecycleViewActivity;
 import com.mytestdemo.recycleview_normal.NormalRecycleViewActivity;
 import com.mytestdemo.scroll_hide_toolbar.ScrollHideToolbarActivity;
+import com.mytestdemo.share_demo.ShareActivity;
 import com.mytestdemo.smart_recyclerview.SmartRecyclerViewActivity;
 import com.mytestdemo.table_viewpager.MyTabViewPagerActivity;
 import com.mytestdemo.tree_list_view.TreeListActivity;
@@ -303,6 +306,38 @@ public class MainActivity extends BaseActivity {
         initCircleMenu();
 
         initTreeView();
+
+        initShare();
+
+        initDynamicView();
+
+//        GenerateValueFiles generateValueFiles = new GenerateValueFiles(1080,
+//                1920, "1000,1000_1200,1200");
+//        generateValueFiles.generate();
+    }
+
+    private void initDynamicView() {
+
+        Button dynamic_view_btn = (Button) findViewById(R.id.dynamic_view_btn);
+        dynamic_view_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, DynamicViewActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initShare() {
+
+        Button share_btn = (Button) findViewById(R.id.share_btn);
+        share_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ShareActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initTreeView() {

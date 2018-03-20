@@ -7,7 +7,9 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewConfiguration;
 
 /**
  * Created by cuishuxiang on 2017/4/19.
@@ -26,6 +28,8 @@ public class MyPathView  extends View{
         mPaint.setStyle(Paint.Style.STROKE);    // 填充模式 - 描边
         mPaint.setStrokeWidth(10);              // 边框宽度 - 10
         mPath = new Path();
+
+        ViewConfiguration.get(getContext()).getScaledTouchSlop();
 
     }
 
@@ -118,4 +122,12 @@ public class MyPathView  extends View{
         canvas.drawPath(dst,mPaint);
 
     }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return super.onTouchEvent(event);
+
+
+    }
+
 }

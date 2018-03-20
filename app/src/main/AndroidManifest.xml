@@ -318,6 +318,16 @@
         <!--树形View-->
         <activity android:name=".tree_view.TreeViewActivity" />
 
+
+        <!--分享demo-->
+        <activity android:name=".share_demo.ShareActivity" />
+
+        <!--微信分享需要添加，该类。否则会报错-->
+        <activity android:name=".wxapi.WXEntryActivity" />
+
+        <!--动态添加view-->
+        <activity android:name=".dynamic_add_view.DynamicViewActivity" />
+
     </application>
 
 </manifest>
